@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Invoice
+    </title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+      }
+      
+      .container {
+        width: 100%;
+        max-width: 700px;
+        margin: 30px auto;
+        padding: 20px;
+        background: #fff;
+      }
+      
+      .header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+      
+      .header h3 {
+        font-size: 28px;
+        font-weight: 700;
+        color: #444;
+        margin: 0;
+      }
+      
+      .header p {
+        font-size: 14px;
+        color: #777;
+        margin-top: 5px;
+      }
+      
+      .details {
+        margin-bottom: 20px;
+      }
+      
+      .details .section strong {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 3px;
+      }
+      
+      .details p {
+        font-size: 14px;
+        color: #555;
+      }
+      
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      
+      .table th,
+      .table td {
+        padding: 10px 15px;
+        text-align: left;
+      }
+      
+      .table th {
+        border: 1px solid #e2e8f0;
+        background-color: #e2e8f0;
+        font-weight: 700;
+        color: #333;
+      }
+      
+      .table tbody tr {
+        border: 1px solid #e2e8f0;
+      }
+      
+      .table td {
+        font-size: 14px;
+        color: #555;
+      }
+      
+      .totals {
+        margin-top: 20px;
+        text-align: right;
+      }
+      
+      .totals p {
+        font-size: 16px;
+        margin: 5px 0;
+      }
+      
+      .totals p strong {
+        color: #333;
+      }
+      
+      .footer {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 12px;
+        color: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div style="width: 50%">
+          <img style="max-width: 150px;" src="{{ businessInfo?.logo?.url }}" alt="Logo" />
+          <h3>
+            {{ businessInfo?.name }}
+          </h3>
+          <p>
+            {{ businessInfo?.address }}
+            <br />
+            Phone: {{ businessInfo?.phone }}
+            <br />
+            Email: {{ businessInfo?.email }}
+          </p>
+          <div class="details">
+            <table
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              style="text-align: left; border-collapse: collapse; width: 100%;"
+            >
+              <tr>
+                <td style="border: 1px solid #e2e8f0; padding: 5px; background: #e2e8f0;">
+                  <strong style="font-size: 15px;">Bill To</strong>
+                </td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #e2e8f0; padding: 5px; font-size: 14px; color: #555;">
+                  {{ order?.user?.fullName || 'Guest' }}<br />
+                  {{ order?.user?.address || '' }}<br />
+                  {{ order?.user?.phoneNumber || '' }}
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div style="text-align: right; margin-top: 20px; width: 40%">
+          <h2>
+            Invoice
+          </h2>
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            style="text-align: center; border-collapse: collapse; width: 100%;"
+          >
+            <tr>
+              <td
+                style="background-color: #e2e8f0; text-align: left; border: 1px solid #e2e8f0; font-size: 15px; padding: 5px;"
+              >
+                Order Date
+              </td>
+              <td style="border: 1px solid #e2e8f0; padding: 5px; font-size: 14px;">
+                <strong>{{ formattedDate }}</strong>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style="background-color: #e2e8f0; text-align: left; border: 1px solid #e2e8f0; font-size: 15px; padding: 5px;"
+              >
+                Invoice
+              </td>
+              <td style="border: 1px solid #e2e8f0; padding: 5px; font-size: 14px;">
+                <strong>#{{ order.orderNumber }}</strong>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style="background-color: #e2e8f0; text-align: left; border: 1px solid #e2e8f0; font-size: 15px; padding: 5px;"
+              >
+                Payment Status
+              </td>
+              <td style="border: 1px solid #e2e8f0; padding: 5px; font-size: 14px;">
+                <strong>{{ order.paymentStatus ? 'Paid' : 'Unpaid' }}</strong>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 10px; text-align: right; padding-right: 10px;">
+        *All prices are in {{ businessInfo.currencyCode }}
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th style="font-weight: 400; font-size: 14px;">
+              Description
+            </th>
+            <th style="font-weight: 400; font-size: 14px; text-align: center; white-space: nowrap;">
+              Unit Price
+            </th>
+            <th style="font-weight: 400; font-size: 14px; text-align: center;">
+              Qty
+            </th>
+            <th style="font-weight: 400; font-size: 14px; text-align: center;">
+              Total
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          @each(item in orderItems)
+            <tr>
+              <td style="border: 1px solid #e2e8f0;">
+                <!-- Debug Section to Preview Order Items -->
+                {{--  <pre>
+                  {{ JSON.stringify(order, null, 2) }}
+                </pre>  --}}
+                <strong>{{ item.name }}</strong>                <br />
+                @if(item.variants?.length > 0)
+                  @each(variant in item.variants)
+                    @if(variant?.variantOptions.length > 0)
+                      @each((option, index) in variant?.variantOptions)
+                        {{ option.name }}
+                        @if(index < variant?.variantOptions.length - 1)
+                          ,
+                        @endif
+                      @endeach
+                    @endif
+                  @endeach
+                @endif
+                @if(item.addons?.length > 0)
+                  @each((addon, index) in item.addons)
+                    {{ addon.name }}
+                    @if(index < item.addons?.length - 1)
+                      ,
+                    @endif
+                  @endeach
+                @endif
+              </td>
+              <td style="border: 1px solid #e2e8f0; text-align: center;">
+                <strong>{{ ((item.price + item.variantsAmount + item.addonsAmount || 0)).toFixed(2).toLocaleString() }}</strong>
+              </td>
+              <td style="border: 1px solid #e2e8f0; text-align: center;">
+                <strong>{{ item.quantity }}</strong>
+              </td>
+              <td style="border: 1px solid #e2e8f0; text-align: center;">
+                <strong>{{ ((item.price + item.variantsAmount + item.addonsAmount) * item.quantity).toFixed(2).toLocaleString() }}</strong>
+              </td>
+            </tr>
+          @endeach
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td
+              colspan="1"
+              style="text-align: right; border: 1px solid #e2e8f0; padding-top: 5px; padding-bottom: 5px;"
+            >
+              Subtotal
+            </td>
+            <td style="border: 1px solid #e2e8f0; text-align: center; padding-top: 5px; padding-bottom: 5px;">
+              <strong>{{ (order.total).toFixed(2).toLocaleString() }}</strong>
+            </td>
+          </tr>
+          @each (charge in orderCharges)
+            <tr>
+              <td>
+              </td>
+              <td>
+              </td>
+              <td
+                colspan="1"
+                style="text-align: right; border: 1px solid #e2e8f0; padding-top: 5px; padding-bottom: 5px;"
+              >
+                {{ charge.name }}
+              </td>
+              <td style="border: 1px solid #e2e8f0; text-align: center; padding-top: 5px; padding-bottom: 5px;">
+                <strong>{{ charge.amount.toFixed(2).toLocaleString() }}</strong>
+              </td>
+            </tr>
+          @end
+          <tr>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td
+              colspan="1"
+              style="text-align: right; border: 1px solid #e2e8f0; padding-top: 5px; padding-bottom: 5px;"
+            >
+              Discount
+            </td>
+            <td style="border: 1px solid #e2e8f0; text-align: center; padding-top: 5px; padding-bottom: 5px;">
+              <strong>-{{ order.discount?.toFixed(2)?.toLocaleString() }}</strong>
+            </td>
+          </tr>
+          @if(order.manualDiscount)
+            <tr>
+              <td>
+              </td>
+              <td>
+              </td>
+              <td
+                colspan="1"
+                style="text-align: right; border: 1px solid #e2e8f0; padding-top: 5px; padding-bottom: 5px;"
+              >
+                Additional Discount
+              </td>
+              <td style="border: 1px solid #e2e8f0; text-align: center; padding-top: 5px; padding-bottom: 5px;">
+                <strong>-{{ order.manualDiscount?.toFixed(2)?.toLocaleString() }}</strong>
+              </td>
+            </tr>
+          @endif
+          <tr>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td
+              colspan="1"
+              style="text-align: right; border: 1px solid #e2e8f0; padding-top: 5px; padding-bottom: 5px;"
+            >
+              Grand Total
+            </td>
+            <td style="border: 1px solid #e2e8f0; text-align: center; padding-top: 5px; padding-bottom: 5px;">
+              <strong>{{ order.grandTotal?.toFixed(2)?.toLocaleString() }}</strong>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+      <div class="footer">
+        <p>
+          Thank you for your order!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
