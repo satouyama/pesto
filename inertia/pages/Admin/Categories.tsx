@@ -125,16 +125,16 @@ export default function Categories() {
             },
             {
               accessorKey: 'name',
-              header: () => t('Category name'),
+              header: () => t('Nome da categoria'),
             },
             {
               accessorKey: 'menuItems',
-              header: () => t('Item count'),
+              header: () => t('Total de item'),
               cell: ({ row }) => <Text>{row.original?.menuItems?.length}</Text>,
             },
             {
               accessorKey: 'priority',
-              header: () => t('Priority'),
+              header: () => t('Prioridade'),
               cell: ({ row }) => (
                 <PrioritySelection
                   defaultPriority={row.original?.priority}

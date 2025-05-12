@@ -1,4 +1,5 @@
 import OrderItemList from '@/components/Admin/ActiveOrders/OrderItemList';
+import PrintInvoice from '@/components/common/PrintInvoice';
 import fetcher from '@/lib/fetcher';
 import { convertToCurrencyFormat } from '@/utils/currency_formatter';
 import { OrderStatus, TOrderStatus } from '@/utils/order_status';
@@ -24,7 +25,6 @@ import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';
 import { match } from 'ts-pattern';
-import PrintInvoice from '@/components/common/PrintInvoice';
 
 const orderStatus = new OrderStatus();
 
@@ -187,7 +187,7 @@ export default function ViewOrder({ orderId }: { orderId: number }) {
                                 size="sm"
                                 className="py-0 leading-5 min-h-fit"
                               >
-                                {t(orderItem?.paymentStatus ? 'PAID' : 'UNPAID')}
+                                {t(orderItem?.paymentStatus ? 'Pago' : 'Não pago')}
                               </Badge>
                             </Flex>
                           </div>

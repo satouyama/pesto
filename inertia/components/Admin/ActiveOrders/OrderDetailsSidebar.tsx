@@ -1,43 +1,43 @@
-import axios from 'axios';
-import * as React from 'react';
-import { useTranslation } from 'react-i18next';
-import useSWR from 'swr';
-import { match } from 'ts-pattern';
+import PrintInvoice from '@/components/common/PrintInvoice';
+import useWindowSize from '@/hooks/useWindowSize';
+import fetcher from '@/lib/fetcher';
+import { PageProps } from '@/types';
+import { Charge } from '@/types/pos_type';
+import { convertToCurrencyFormat } from '@/utils/currency_formatter';
+import { OrderStatus, TOrderStatus } from '@/utils/order_status';
+import { startCase } from '@/utils/string_formatter';
 import {
-  Text,
+  Badge,
+  Box,
+  Button,
+  Divider,
+  Drawer,
+  DrawerBody,
+  DrawerContent,
+  DrawerOverlay,
+  Flex,
+  HStack,
+  Input,
   Menu,
   MenuButton,
   MenuItem,
   MenuList,
-  Button,
-  Switch,
-  Badge,
-  Flex,
-  Divider,
-  Textarea,
-  HStack,
   Spinner,
-  Box,
-  Input,
-  Drawer,
-  DrawerContent,
-  DrawerOverlay,
-  DrawerBody,
+  Switch,
+  Text,
+  Textarea,
 } from '@chakra-ui/react';
-import { ArrowDown2 } from 'iconsax-react';
-import fetcher from '@/lib/fetcher';
-import { startCase } from '@/utils/string_formatter';
-import { convertToCurrencyFormat } from '@/utils/currency_formatter';
-import OrderItemList from './OrderItemList';
-import { toast } from 'sonner';
-import UpdateDeliveryPerson from './UpdateDeliveryPerson';
-import { OrderStatus, TOrderStatus } from '@/utils/order_status';
-import PrintInvoice from '@/components/common/PrintInvoice';
-import useWindowSize from '@/hooks/useWindowSize';
-import DiscountTypeRadioGroup from '../POS/DiscountTypeSelect';
 import { usePage } from '@inertiajs/react';
-import { PageProps } from '@/types';
-import { Charge } from '@/types/pos_type';
+import axios from 'axios';
+import { ArrowDown2 } from 'iconsax-react';
+import * as React from 'react';
+import { useTranslation } from 'react-i18next';
+import { toast } from 'sonner';
+import useSWR from 'swr';
+import { match } from 'ts-pattern';
+import DiscountTypeRadioGroup from '../POS/DiscountTypeSelect';
+import OrderItemList from './OrderItemList';
+import UpdateDeliveryPerson from './UpdateDeliveryPerson';
 
 type OrderType = 'dine_in' | 'delivery' | 'pickup';
 type PaymentType = 'cash' | 'card';
@@ -336,7 +336,7 @@ export default function OrderDetailsSidebar({
                         size="sm"
                         className="py-0 leading-5 min-h-fit"
                       >
-                        {t(paymentStatus ? 'Paid' : 'Unpaid')}
+                        {t(paymentStatus ? 'Pago' : 'Não pago')}
                       </Badge>
                     </Flex>
                   </div>
@@ -378,7 +378,7 @@ export default function OrderDetailsSidebar({
                     <Textarea
                       value={customerNote}
                       onChange={(e) => setCustomerNote(e.target.value)}
-                      placeholder={t('Write customer note')}
+                      placeholder={t('Anotações do cliente')}
                     />
                   )}
                 </div>

@@ -1,6 +1,5 @@
-import { useRef } from 'react';
-import axios from 'axios';
-import { Form, Formik } from 'formik';
+import NewCustomerSchema from '@/schemas/NewCustomerSchema';
+import { BaseUserType } from '@/types/customer_type';
 import {
   Button,
   Drawer,
@@ -12,18 +11,19 @@ import {
   IconButton,
   useDisclosure,
 } from '@chakra-ui/react';
-import { toast } from 'sonner';
-import NewCustomerSchema from '@/schemas/NewCustomerSchema';
+import axios from 'axios';
+import { Form, Formik } from 'formik';
 import { Edit2 } from 'iconsax-react';
-import { BaseUserType } from '@/types/customer_type';
+import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { toast } from 'sonner';
 import FieldRenderer from '../FieldRenderer';
 
 // Field items configuration
 const fieldItems = [
-  { name: 'firstName', label: 'First name', type: 'text', placeholder: 'Customer first name' },
-  { name: 'lastName', label: 'Last name', type: 'text', placeholder: 'Customer last name' },
-  { name: 'email', label: 'Email address', type: 'email', placeholder: 'Email address' },
+  { name: 'firstName', label: 'Primeiro nome', type: 'text', placeholder: 'Customer first name' },
+  { name: 'lastName', label: 'Sobrenome', type: 'text', placeholder: 'Customer last name' },
+  { name: 'email', label: 'Endereço', type: 'email', placeholder: 'Email address' },
   { name: 'phoneNumber', label: 'Contact number', type: 'text', placeholder: 'Contact number' },
   { name: 'address', label: 'Address', type: 'text', placeholder: 'Address' },
   { name: 'isSuspended', label: 'Acc. Status', type: 'switch', placeholder: 'Suspended' },

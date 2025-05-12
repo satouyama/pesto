@@ -1,32 +1,32 @@
-import axios from 'axios';
+import BusinessPlatformSetupFormSchema from '@/schemas/BusinessPlatformSetupFormSchema';
+import { currencies } from '@/utils/currencies';
+import { startCase } from '@/utils/string_formatter';
 import {
+  Box,
+  Button,
   Checkbox,
   Flex,
+  FormControl,
+  FormErrorMessage,
   HStack,
   Input,
-  Switch,
-  Text,
   InputGroup,
   InputLeftElement,
   Popover,
-  PopoverTrigger,
-  Button,
   PopoverContent,
-  RadioGroup,
+  PopoverTrigger,
   Radio,
-  FormControl,
-  FormErrorMessage,
+  RadioGroup,
   Spinner,
-  Box,
+  Switch,
+  Text,
 } from '@chakra-ui/react';
-import { Alarm, ArrowDown2 } from 'iconsax-react';
-import { startCase } from '@/utils/string_formatter';
-import { currencies } from '@/utils/currencies';
-import { toast } from 'sonner';
-import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
+import axios from 'axios';
 import { Field, Form, Formik } from 'formik';
-import BusinessPlatformSetupFormSchema from '@/schemas/BusinessPlatformSetupFormSchema';
+import { Alarm, ArrowDown2 } from 'iconsax-react';
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { toast } from 'sonner';
 import CurrencyItem from './CurrencyItem';
 
 type FormData = {
@@ -168,7 +168,7 @@ export default function PlatformSetup({
 
                 {/* Delivery charge */}
                 <Flex className="gap-y-2 flex-col">
-                  <label className="font-medium text-sm"> {t('Delivery charge')} </label>
+                  <label className="font-medium text-sm"> {t('Taxa de entrega')} </label>
 
                   <Field name="deliveryCharge">
                     {({ field, meta }: any) => (

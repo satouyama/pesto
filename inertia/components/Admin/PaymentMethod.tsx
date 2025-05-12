@@ -1,3 +1,4 @@
+import PaymentMethodSchema from '@/schemas/PaymentMethodSchema';
 import { Box, Button, FormLabel, Spinner } from '@chakra-ui/react';
 import axios from 'axios';
 import { Form, Formik } from 'formik';
@@ -6,7 +7,6 @@ import { useTranslation } from 'react-i18next';
 import { toast } from 'sonner';
 import { match } from 'ts-pattern';
 import { FieldRenderer } from './BusinessSetup/FieldRenderer';
-import PaymentMethodSchema from '@/schemas/PaymentMethodSchema';
 
 type PaymentMethod = {
   config: string;
@@ -26,6 +26,11 @@ type PaymentMethod = {
   webhook: string;
 };
 
+function parseJson<T = any>(str: string, fallback: T): T {
+  try { return JSON.parse(str) as T } catch { return fallback }
+}
+
+
 export default function PaymentMethod({
   isLoading,
   paymentMethod,
@@ -36,7 +41,7 @@ export default function PaymentMethod({
   refresh?: () => void;
 }) {
   const { t } = useTranslation();
-  const config = JSON.parse(paymentMethod?.config);
+  const config = parseJson(paymentMethod.config, paymentMethod.config) as any;
   // form fields config
   let fieldItems: Array<{
     name: string;
@@ -46,8 +51,8 @@ export default function PaymentMethod({
     options?: Array<{ label: string; value: string }>;
     items?: Array<{ name: string; label: string; type: string; placeholder?: string }>;
   }> = [
-    { name: 'name', label: 'Name', type: 'text', placeholder: 'Name of the payment method' },
-  ]
+      { name: 'name', label: 'Name', type: 'text', placeholder: 'Name of the payment method' },
+    ]
   fieldItems = [...fieldItems, ...config?.fields?.map((field: any) => ({
     name: field.name,
     label: field.label,

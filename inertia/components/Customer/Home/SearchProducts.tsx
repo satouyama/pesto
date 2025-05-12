@@ -43,7 +43,7 @@ export default function SearchProducts({ search }: { search: string }) {
           >
             <ArrowLeft />
           </IconButton>
-          <h2 className="text-2xl">{`${t('Showing results for')} ${search}`}</h2>
+          <h2 className="text-2xl">{`${t('Resultados para')} ${search}`}</h2>
         </div>
 
         <div className="@container w-full px-6">

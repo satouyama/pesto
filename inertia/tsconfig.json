@@ -2,11 +2,20 @@
   "extends": "@adonisjs/tsconfig/tsconfig.client.json",
   "compilerOptions": {
     "baseUrl": ".",
+    "sourceMap": true,
+    "inlineSources": true,
     "module": "ESNext",
     "jsx": "react-jsx",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": [
+        "./*"
+      ]
     }
   },
-  "include": ["./**/*.ts", "./**/*.tsx", "./**/*.d.ts", "workers/sw_notify.js"]
+  "include": [
+    "./**/*.ts",
+    "./**/*.tsx",
+    "./**/*.d.ts",
+    "workers/sw_notify.js"
+  ]
 }

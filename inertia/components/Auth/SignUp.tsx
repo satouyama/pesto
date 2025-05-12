@@ -11,11 +11,17 @@ export default function SignUp() {
 
   // Fields configuration
   const fields = [
-    { name: 'firstName', label: 'First name', type: 'text', placeholder: 'Enter your first name' },
-    { name: 'lastName', label: 'Last name', type: 'text', placeholder: 'Enter your last name' },
+    { name: 'firstName', label: 'Primeiro nome', type: 'text', placeholder: 'Enter your first name' },
+    { name: 'lastName', label: 'Sobrenome', type: 'text', placeholder: 'Enter your last name' },
     { name: 'email', label: 'Email', type: 'email', placeholder: 'Enter your email' },
-    { name: 'phoneNumber', label: 'Phone', type: 'tel', placeholder: 'Enter your phone' },
-    { name: 'address', label: 'Address', type: 'text', placeholder: 'Enter your address' },
+    {
+      name: 'phoneNumber',
+      label: 'Telefone',
+      type: 'tel',
+      placeholder: 'Enter your phone',
+      mask: '+55(99) 99999-9999'
+    },
+    { name: 'address', label: 'Endereço', type: 'text', placeholder: 'Enter your address' },
     { name: 'password', label: 'Password', type: 'password', placeholder: 'Enter password' },
     {
       name: 'confirmPassword',

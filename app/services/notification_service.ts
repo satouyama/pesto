@@ -1,13 +1,13 @@
 import notificationErrorHandler from '#exceptions/notification_error_handler';
 import Notification from '#models/notification';
+import Order from '#models/order';
+import Reservation from '#models/reservation';
 import User from '#models/user';
 import transmit from '@adonisjs/transmit/services/main';
 import Roles from '../enum/roles.js';
-import Order from '#models/order';
-import Reservation from '#models/reservation';
 
 class NotificationService {
-  constructor() {}
+  constructor() { }
   async sendNewRegistraionNotification(user: User) {
     try {
       const admins = await User.query().whereIn('roleId', [Roles.ADMIN, Roles.MANAGER, Roles.POS]);
@@ -33,8 +33,9 @@ class NotificationService {
         if (admin.id === user.id) return;
         const notification = await Notification.create({
           userId: admin.id,
-          title: 'New Order',
-          body: `A new order has been placed by userId #${user.id} . Order number #${order.orderNumber}`,
+          title: 'Novo Pedido',
+          body: `Um novo pedido foi feito pelo userId # ${user.id}. Numero do pedido # ${order.orderNumber}`,
+          // body: `A new order has been placed by userId #${user.id} . Order number #${order.orderNumber}`,
           type: 'new_order',
           navigate: `/${getRoleRoute(admin.roleId)}/active-orders`,
         });

@@ -82,6 +82,7 @@ export default class User extends compose(BaseModel, AuthFinder, Filterable) {
   @hasMany(() => Order, { foreignKey: 'deliveryManId' })
   declare deliveryOrders: HasMany<typeof Order>;
 
+
   @computed()
   get fullName(): string {
     return `${this.firstName ?? ''} ${this.lastName ?? ''}`.trim();

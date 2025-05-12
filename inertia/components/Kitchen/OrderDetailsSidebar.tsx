@@ -184,7 +184,7 @@ export default function OrderDetailsSidebar({
                   <Textarea
                     value={customerNote}
                     onChange={(e) => setCustomerNote(e.target.value)}
-                    placeholder={t('Write customer note')}
+                    placeholder={t('Anotações do cliente')}
                   />
                 </div>
               </div>

@@ -6,7 +6,7 @@ import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import ProductDetails from './ProductDetails';
 
-interface IProps extends BaseMenuItem {}
+interface IProps extends BaseMenuItem { }
 
 export default function ProductItem(props: IProps) {
   const { t } = useTranslation();

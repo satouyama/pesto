@@ -31,6 +31,7 @@ export default function OrderCardReadOnly({ data }: { data: Data }) {
   const [status, setStatus] = React.useState<TOrderStatus>(() =>
     orderStatus.getStatusDetails(data.status || 'pending')
   );
+  console.log(status);
 
   React.useEffect(() => {
     setStatus(orderStatus.getStatusDetails(data.status));

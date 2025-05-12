@@ -1,7 +1,8 @@
-import Chart from 'react-apexcharts';
-import { ApexOptions } from 'apexcharts';
 import { convertToCurrencyFormat } from '@/utils/currency_formatter';
+import { monthMap } from '@/utils/date_formatter';
 import { Spinner } from '@chakra-ui/react';
+import { ApexOptions } from 'apexcharts';
+import Chart from 'react-apexcharts';
 
 export default function EarningReportChart({
   periodType,
@@ -14,7 +15,7 @@ export default function EarningReportChart({
   isLoading: boolean;
   onPeriodSelect: (period: string) => void;
 }) {
-  const currentPeriod = new Date().toLocaleString('default', periodType === 'week' ? { weekday: 'short' } : { month: 'short'});
+  const currentPeriod = new Date().toLocaleString('default', periodType === 'week' ? { weekday: 'short' } : { month: 'short' });
 
   const series = [
     {
@@ -46,7 +47,10 @@ export default function EarningReportChart({
 
     // axis
     xaxis: {
-      categories: data?.reports?.map((report: any) => report.period?.substring(0, 3)),
+      categories: data?.reports.map((report: any) => {
+        const pt = monthMap[report.period] ?? report.period;
+        return pt.substring(0, 3);
+      }),
       axisBorder: { show: false },
       axisTicks: { show: false },
       labels: {

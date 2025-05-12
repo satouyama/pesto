@@ -1,6 +1,7 @@
 import DataTable from '@/components/common/DataTable';
 import useTableData from '@/data/use_table_data';
 import { convertToCurrencyFormat } from '@/utils/currency_formatter';
+import { mapPaymentType } from '@/utils/order_status';
 import { Badge, HStack, Text } from '@chakra-ui/react';
 import { SortingState } from '@tanstack/react-table';
 import { useEffect, useState } from 'react';
@@ -141,7 +142,7 @@ export default function CancelledTable({
               variant="subtle"
               colorScheme={row.original.paymentType === 'cash' ? 'primary' : 'blue'}
             >
-              {t(row.original.paymentType)}
+              {t(mapPaymentType(row.original.paymentType))}
             </Badge>
           ),
         },

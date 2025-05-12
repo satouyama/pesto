@@ -48,7 +48,7 @@ export default function OrderStatus({ index }: { index: number }) {
                   {t('Ready')}
                 </Tab>
                 <Tab as={Link} href="/admin/order-status/on-delivery">
-                  {t('On delivery')}
+                  {t('Para entrega')}
                 </Tab>
                 <Tab as={Link} href="/admin/order-status/completed">
                   {t('Completed')}

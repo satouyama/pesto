@@ -7,10 +7,14 @@ import {
   PopoverTrigger,
   Text,
 } from '@chakra-ui/react';
-import { ArrowLeft2, ArrowRight2, Calendar } from 'iconsax-react';
 import { format } from 'date-fns';
-import DatePickerComponent from 'react-datepicker';
+import { ptBR } from 'date-fns/locale';
+import { ArrowLeft2, ArrowRight2, Calendar } from 'iconsax-react';
+import DatePickerComponent, { registerLocale, setDefaultLocale } from 'react-datepicker';
 import { useTranslation } from 'react-i18next';
+
+registerLocale('pt-BR', ptBR)
+setDefaultLocale('pt-BR')
 
 export default function DatePicker({
   selected,
@@ -34,7 +38,7 @@ export default function DatePicker({
               className="text-left justify-between text-black font-normal w-full bg-transparent border-secondary-200"
             >
               <Text color={selected ? '' : 'secondary.500'}>
-                {selected ? format(selected, 'dd MMM yyyy') : t('Select date')}
+                {selected ? format(selected, 'dd MMM yyyy', { locale: ptBR }) : t('Select date')}
               </Text>
             </Button>
           </PopoverTrigger>
@@ -47,6 +51,8 @@ export default function DatePicker({
                   onSelect(date!);
                   onClose();
                 }}
+                locale="pt-BR"
+                dateFormat="dd/MM/yyyy"
                 inline
                 renderCustomHeader={({
                   date,
@@ -57,7 +63,7 @@ export default function DatePicker({
                 }) => (
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-base font-medium text-secondary-700">
-                      {date && format(date, 'MMM yyyy')}
+                      {date && format(date, 'MMM yyyy', { locale: ptBR })}
                     </span>
 
                     <div className="space-x-2">

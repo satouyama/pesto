@@ -1,18 +1,20 @@
-import axios from 'axios';
-import React, { useState } from 'react';
-import { toast } from 'sonner';
-import { match } from 'ts-pattern';
-import { Form, Formik } from 'formik';
-import { CalendarAdd } from 'iconsax-react';
-import { useTranslation } from 'react-i18next';
-import { format } from 'date-fns';
-import { useSWRConfig } from 'swr';
-import Layout from '@/components/common/Layout';
 import FieldRenderer from '@/components/Admin/Reservations/FieldRenderer';
-import { Button } from '@chakra-ui/react';
-import ExistingReservations from './ExistingReservations';
-import useWindowSize from '@/hooks/useWindowSize';
+import Layout from '@/components/common/Layout';
 import useTableData from '@/data/use_table_data';
+import useWindowSize from '@/hooks/useWindowSize';
+import { Button } from '@chakra-ui/react';
+import axios from 'axios';
+import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
+import { Form, Formik } from 'formik';
+import { t } from 'i18next';
+import { CalendarAdd } from 'iconsax-react';
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { toast } from 'sonner';
+import { useSWRConfig } from 'swr';
+import { match } from 'ts-pattern';
+import ExistingReservations from './ExistingReservations';
 
 const page = 1;
 const limit = 10;
@@ -21,7 +23,7 @@ const limit = 10;
 const RESERVATION_FIELDS = [
   {
     type: 'block',
-    label: 'Customer information',
+    label: t('Customer information'),
     items: [
       { name: 'userId', type: 'customer' },
       {
@@ -31,12 +33,12 @@ const RESERVATION_FIELDS = [
           { name: 'tableNumber', type: 'number', label: 'Table number' },
         ],
       },
-      { name: 'reservationNote', type: 'textarea', placeholder: 'Write customer note' },
+      { name: 'reservationNote', type: 'textarea', placeholder: t('Anotações do cliente') },
     ],
   },
   {
     type: 'block',
-    label: 'Date and time',
+    label: t('Date and time'),
     items: [
       { type: 'datepicker', name: 'reservationDate' },
       {
@@ -77,7 +79,7 @@ export default function Reservation() {
                 email: '',
                 phoneNumber: '',
                 userId: '',
-                reservationDate: new Date(),
+                reservationDate: format(new Date(), 'yyyy-MM-dd', { locale: ptBR }),
                 reservationNote: '',
                 numberOfPeople: 1,
                 tableNumber: 1,
@@ -87,9 +89,9 @@ export default function Reservation() {
               onSubmit={async (values, actions) => {
                 const reservationData = {
                   userId: values.userId,
-                  reservationDate: format(values.reservationDate, 'yyyy-MM-dd'),
-                  startTime: format(values.startTime, 'h:mm a'),
-                  endTime: format(values.endTime, 'h:mm a'),
+                  reservationDate: format(values.reservationDate, 'yyyy-MM-dd', { locale: ptBR }),
+                  startTime: format(values.startTime, 'h:mm a', { locale: ptBR }),
+                  endTime: format(values.endTime, 'h:mm a', { locale: ptBR }),
                   numberOfPeople: values.numberOfPeople,
                   tableNumber: String(values.tableNumber),
                   reservationNote: values.reservationNote,

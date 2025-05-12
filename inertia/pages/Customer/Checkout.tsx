@@ -1,6 +1,8 @@
 import CustomerLayout from '@/components/Customer/CustomerLayout';
-import { convertToCurrencyFormat } from '@/utils/currency_formatter';
+import usePOS from '@/data/use_pos';
+import fetcher from '@/lib/fetcher';
 import { PageProps } from '@/types';
+import { convertToCurrencyFormat } from '@/utils/currency_formatter';
 import {
   Button,
   Flex,
@@ -16,11 +18,9 @@ import { Field, Form, Formik } from 'formik';
 import { ArrowLeft } from 'iconsax-react';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import * as Yup from 'yup';
-import useSWR from 'swr';
-import fetcher from '@/lib/fetcher';
 import { toast } from 'sonner';
-import usePOS from '@/data/use_pos';
+import useSWR from 'swr';
+import * as Yup from 'yup';
 
 const CheckoutFormSchema = Yup.object({
   firstName: Yup.string().required('First name is required'),
@@ -248,7 +248,7 @@ export default function Checkout() {
                                 cart.changePaymentType('cash');
                               }}
                             >
-                              Cash
+                              Dinheiro
                             </Button>
 
                             {paymentMethods?.content?.map((item: Record<string, any>) => (

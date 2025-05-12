@@ -1,5 +1,8 @@
+import Empty from '@/components/common/Empty';
 import QuantityController from '@/components/common/QuantityController';
+import usePOS from '@/data/use_pos';
 import { PageProps } from '@/types';
+import { POSItemAddon, POSItemVariant } from '@/types/pos_type';
 import { convertToCurrencyFormat } from '@/utils/currency_formatter';
 import {
   Badge,
@@ -28,11 +31,8 @@ import { Link, usePage } from '@inertiajs/react';
 import { Bag2, Trash } from 'iconsax-react';
 import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import OrderTypeRadioGroup from './OrderTypeSelect';
-import Empty from '@/components/common/Empty';
 import EditCartItem from './EditCartItem';
-import usePOS from '@/data/use_pos';
-import { POSItemAddon, POSItemVariant } from '@/types/pos_type';
+import OrderTypeRadioGroup from './OrderTypeSelect';
 
 export default function Cart() {
   const cart = usePOS();
@@ -260,7 +260,7 @@ export default function Cart() {
                   key={charge?.id}
                   className="grid grid-cols-[1fr,100px] border-b py-1.5 border-black/5 px-4 text-lg"
                 >
-                  <Text>{t(charge.name)}:</Text>
+                  <Text>{t("Taxa de entrega")}:</Text>
                   <Text fontWeight={500} textAlign="right">
                     {convertToCurrencyFormat(charge.amount)}
                   </Text>

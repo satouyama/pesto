@@ -151,7 +151,7 @@ export default function ProductDetails({
               <div className="px-4 py-1 bg-green-50 text-green-600 text-sm rounded-full">
                 <span>
                   {menuItem.discountType === 'amount'
-                    ? `$${menuItem.discount} `
+                    ? `R$${menuItem.discount} `
                     : `${menuItem.discount}% `}
                   {t('off')}
                 </span>
@@ -187,12 +187,12 @@ export default function ProductDetails({
                               {t(variant.name)}
                             </Text>
                             <span className="text-secondary-600 text-sm leading-5 font-normal">
-                              {t(variant.requirement === 'required' ? '(Required)' : '(Optional)')}
+                              {t(variant.requirement === 'required' ? '(Obrigatório)' : '(Opcional)')}
                             </span>
                           </Th>
 
                           <Th isNumeric w="150px" className="text-secondary-900 font-inter">
-                            {t('Price')}
+                            {t('Preço')}
                           </Th>
                         </Tr>
                       </Thead>
@@ -379,7 +379,7 @@ export default function ProductDetails({
 
         <DrawerFooter className="p-0 block">
           <div className="py-2 px-4 shadow-primary border-t border-t-black/10">
-            <p className="mb-2 text-center text-secondary-500 text-sm">{t('Quantity')}</p>
+            <p className="mb-2 text-center text-secondary-500 text-sm">{t('Quantidade')}</p>
             <div className="flex justify-center items-center gap-4">
               <QuantityController
                 value={qty}
@@ -404,7 +404,7 @@ export default function ProductDetails({
                   resetState();
                 }}
               >
-                {t('Close')}
+                {t('Fechar')}
               </Button>
               <Button
                 variant="solid"
@@ -412,7 +412,7 @@ export default function ProductDetails({
                 className="button-primary"
                 onClick={itemAddToCart}
               >
-                {t('Add to bag')}
+                {t('ADD TO BAG')}
               </Button>
             </div>
           </div>

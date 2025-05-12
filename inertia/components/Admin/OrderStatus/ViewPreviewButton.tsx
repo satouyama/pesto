@@ -1,41 +1,41 @@
-import axios from 'axios';
-import * as React from 'react';
-import { useTranslation } from 'react-i18next';
-import useSWR from 'swr';
-import { match } from 'ts-pattern';
+import OrderItemList from '@/components/Admin/ActiveOrders/OrderItemList';
+import PrintInvoice from '@/components/common/PrintInvoice';
+import fetcher from '@/lib/fetcher';
+import { PageProps } from '@/types';
+import { convertToCurrencyFormat } from '@/utils/currency_formatter';
+import { OrderStatus, TOrderStatus } from '@/utils/order_status';
+import { startCase } from '@/utils/string_formatter';
 import {
-  Text,
+  Badge,
+  Box,
+  Button,
+  Divider,
+  Drawer,
+  DrawerBody,
+  DrawerContent,
+  DrawerFooter,
+  DrawerOverlay,
+  Flex,
+  HStack,
+  Input,
   Menu,
   MenuButton,
   MenuItem,
   MenuList,
-  Button,
-  Switch,
-  Badge,
-  Flex,
-  Divider,
-  Textarea,
-  HStack,
   Spinner,
-  Box,
-  Input,
+  Switch,
+  Text,
+  Textarea,
   useDisclosure,
-  Drawer,
-  DrawerContent,
-  DrawerOverlay,
-  DrawerBody,
-  DrawerFooter,
 } from '@chakra-ui/react';
-import { ArrowDown2, Eye } from 'iconsax-react';
-import fetcher from '@/lib/fetcher';
-import { startCase } from '@/utils/string_formatter';
-import { convertToCurrencyFormat } from '@/utils/currency_formatter';
-import OrderItemList from '@/components/Admin/ActiveOrders/OrderItemList';
-import { toast } from 'sonner';
-import PrintInvoice from '@/components/common/PrintInvoice';
-import { OrderStatus, TOrderStatus } from '@/utils/order_status';
 import { usePage } from '@inertiajs/react';
-import { PageProps } from '@/types';
+import axios from 'axios';
+import { ArrowDown2, Eye } from 'iconsax-react';
+import * as React from 'react';
+import { useTranslation } from 'react-i18next';
+import { toast } from 'sonner';
+import useSWR from 'swr';
+import { match } from 'ts-pattern';
 import DiscountTypeRadioGroup from '../POS/DiscountTypeSelect';
 
 const orderStatus = new OrderStatus();
@@ -219,7 +219,7 @@ export default function OrderPreviewButton({
                                     key={item}
                                     isDisabled={Boolean(
                                       !branding?.business?.[
-                                        item as keyof (typeof branding)['business']
+                                      item as keyof (typeof branding)['business']
                                       ]
                                     )}
                                     onClick={() => setOrderType(item as OrderType)}
@@ -327,7 +327,7 @@ export default function OrderPreviewButton({
                                 size="sm"
                                 className="py-0 leading-5 min-h-fit"
                               >
-                                {t(paymentStatus ? 'PAID' : 'UNPAID')}
+                                {t(paymentStatus ? 'PAGO' : 'NÃO PAGO')}
                               </Badge>
                             </Flex>
                           </div>
@@ -345,7 +345,7 @@ export default function OrderPreviewButton({
                           <Textarea
                             value={customerNote}
                             onChange={(e) => setCustomerNote(e.target.value)}
-                            placeholder={t('Write customer note')}
+                            placeholder={t('Anotações do cliente')}
                           />
                         </div>
                       </div>

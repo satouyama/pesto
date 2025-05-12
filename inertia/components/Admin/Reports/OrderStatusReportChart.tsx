@@ -1,6 +1,7 @@
-import Chart from 'react-apexcharts';
-import { ApexOptions } from 'apexcharts';
+import { monthMap } from '@/utils/date_formatter';
 import { Spinner } from '@chakra-ui/react';
+import { ApexOptions } from 'apexcharts';
+import Chart from 'react-apexcharts';
 
 export default function OrderStatusReportChart({
   data,
@@ -13,15 +14,15 @@ export default function OrderStatusReportChart({
 }) {
   const series = [
     {
-      name: 'Completed',
+      name: 'Completado',
       data: data?.reports?.map((report: any) => report.counts.completed),
     },
     {
-      name: 'Canceled',
+      name: 'Canceledo',
       data: data?.reports?.map((report: any) => report.counts.canceled),
     },
     {
-      name: 'Failed',
+      name: 'Falhou',
       data: data?.reports?.map((report: any) => report.counts.failed),
     },
   ];
@@ -67,7 +68,10 @@ export default function OrderStatusReportChart({
 
     // XAxis
     xaxis: {
-      categories: data?.reports?.map((report: any) => report.period?.substring(0, 3)),
+      categories: data?.reports?.map((report: any) => {
+        const pt = monthMap[report.period]
+        return pt.substring(0, 3);
+      }),
       axisBorder: { show: false },
       axisTicks: { show: false },
       labels: {

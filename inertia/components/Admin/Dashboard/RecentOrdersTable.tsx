@@ -1,7 +1,7 @@
 import DataTable from '@/components/common/DataTable';
 import useTableData from '@/data/use_table_data';
 import { convertToCurrencyFormat } from '@/utils/currency_formatter';
-import { OrderStatus } from '@/utils/order_status';
+import { mapOrderTypeStatus, mapPaymentType, OrderStatus } from '@/utils/order_status';
 import { startCase } from '@/utils/string_formatter';
 import { Badge, Button, Menu, MenuButton, MenuItem, MenuList, Switch } from '@chakra-ui/react';
 import { SortingState } from '@tanstack/react-table';
@@ -102,7 +102,7 @@ export default function RecentOrdersTable() {
                     colorScheme[row.original.type as keyof typeof colorScheme] || 'secondary'
                   }
                 >
-                  {t(row.original.type?.replace('_', '-'))}
+                  {t(mapOrderTypeStatus(row.original.type?.replace('_', '-')))}
                 </Badge>
               );
             },
@@ -124,7 +124,7 @@ export default function RecentOrdersTable() {
                 variant="subtle"
                 colorScheme={row.original.paymentType === 'cash' ? 'primary' : 'blue'}
               >
-                {t(row.original.paymentType)}
+                {t(mapPaymentType(row.original.paymentType))}
               </Badge>
             ),
           },

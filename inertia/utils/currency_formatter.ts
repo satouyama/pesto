@@ -26,12 +26,11 @@ export const convertToCurrencyFormat = (amount: number, opts: CurrencyOptions = 
     currencySymbolPosition = symbolPosition;
   }
 
-  const locale = opts.locale || 'en-US';
+  const locale = opts.locale || 'pt-BR';
   // Default to USD if no currency is specified in options
   const formatter = new Intl.NumberFormat(locale, {
-    style: 'currency',
-    currency: opts.currency || 'USD',
-    currencyDisplay: 'narrowSymbol',
+    currency: 'BRL',                // força Real brasileiro
+    currencyDisplay: 'symbol',
     currencySign: 'standard',
     minimumFractionDigits: 2,
     ...opts,

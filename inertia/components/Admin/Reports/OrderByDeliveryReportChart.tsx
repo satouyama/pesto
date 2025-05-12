@@ -1,6 +1,6 @@
-import Chart from 'react-apexcharts';
-import { ApexOptions } from 'apexcharts';
 import { Spinner } from '@chakra-ui/react';
+import { ApexOptions } from 'apexcharts';
+import Chart from 'react-apexcharts';
 
 export default function OrderByDeliveryPersonReportChart({
   data,
@@ -18,6 +18,7 @@ export default function OrderByDeliveryPersonReportChart({
     ?.find((report: any) => report.period === month)
     ?.deliveryManOrderCounts?.filter((d: any) => !!d?.deliveryMan?.id);
 
+  console.log(data?.reports);
   const series = [
     {
       data: report?.map((r: any) => r.count),
@@ -38,7 +39,7 @@ export default function OrderByDeliveryPersonReportChart({
 
     // axis
     xaxis: {
-      categories: report?.map((r: any) => r.deliveryMan.fullName),
+      categories: report?.map((r: any) => r?.deliveryMan?.fullName),
       axisBorder: { show: false },
       axisTicks: { show: false },
       labels: {

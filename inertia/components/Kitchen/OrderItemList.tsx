@@ -13,7 +13,7 @@ export default function OrderItemList({ items }: { items: Item[] }) {
   // render variants
   const renderVariant = (variantString: string) => {
     if (!variantString) return null;
-    const variants = JSON.parse(variantString);
+    const variants = JSON.parse(JSON.stringify(variantString));
     return variants?.map((variant: any) => (
       <span key={variant.id}>
         {variant.name} ={' '}
@@ -28,7 +28,7 @@ export default function OrderItemList({ items }: { items: Item[] }) {
   // render addons
   const renderAddons = (addonString: string) => {
     if (!addonString) return null;
-    const addons = JSON.parse(addonString);
+    const addons = JSON.parse(JSON.stringify(addonString));
     return addons?.map((addon: any) => (
       <span key={addon.id}>
         {addon.name} <span className="font-bold">(QTY: {addon.quantity}) </span>

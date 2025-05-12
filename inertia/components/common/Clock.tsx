@@ -1,6 +1,7 @@
 import { Text } from '@chakra-ui/react';
 import { format } from 'date-fns';
-import { useState, useEffect } from 'react';
+import { ptBR } from 'date-fns/locale';
+import { useEffect, useState } from 'react';
 
 export default function Clock() {
   const [date, setDate] = useState(new Date());
@@ -15,7 +16,7 @@ export default function Clock() {
 
   return (
     <Text as="p" noOfLines={1} className="font-bold">
-      {format(date, 'h:mm a')}
+      {format(date, 'HH:mm:ss', { locale: ptBR })}
     </Text>
   );
 }

@@ -1,4 +1,8 @@
-import { useEffect, useState } from 'react';
+import OrderCard from '@/components/Admin/ActiveOrders/OrderCard';
+import Layout from '@/components/common/Layout';
+import OrderDetailsSidebar from '@/components/Kitchen/OrderDetailsSidebar';
+import useDebounce from '@/hooks/useDebounce';
+import fetcher from '@/lib/fetcher';
 import {
   Accordion,
   AccordionButton,
@@ -18,14 +22,10 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { SearchNormal } from 'iconsax-react';
-import Layout from '@/components/common/Layout';
-import OrderCard from '@/components/Admin/ActiveOrders/OrderCard';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import useDebounce from '@/hooks/useDebounce';
 import useSWR from 'swr';
-import fetcher from '@/lib/fetcher';
 import { match, P } from 'ts-pattern';
-import OrderDetailsSidebar from '@/components/Kitchen/OrderDetailsSidebar';
 
 export default function ActiveOrders() {
   const { t } = useTranslation();
@@ -110,11 +110,11 @@ export default function ActiveOrders() {
             <div className="flex flex-col @3xl:flex-row @3xl:items-center justify-between gap-4">
               <div className="flex-1 flex flex-wrap gap-3 justify-between items-center">
                 <TabList className="flex flex-wrap @lg:flex-nowrap whitespace-nowrap border-b-0 @lg:border-b-2 [&>button[aria-selected=true]]:bg-primary-500 [&>button[aria-selected=true]]:text-white [&>button[aria-selected=true]]:rounded-md @lg:[&>button[aria-selected=true]]:bg-transparent @lg:[&>button[aria-selected=true]]:text-primary-500 @lg:[&>button[aria-selected=true]]:rounded-none">
-                  <Tab>{t('All')}</Tab>
+                  <Tab>{t('Todos')}</Tab>
                   <Tab>{t('Pending')}</Tab>
-                  <Tab>{t('Confirmed')}</Tab>
+                  <Tab>{t('Confirmado')}</Tab>
                   <Tab>{t('Processing')}</Tab>
-                  <Tab>{t('On delivery')}</Tab>
+                  <Tab>{t('Para entrega')}</Tab>
                 </TabList>
                 {!isOpen && (
                   <div className="max-w-[300px]">

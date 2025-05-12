@@ -14,7 +14,10 @@ import { createRoot } from 'react-dom/client';
 
 createInertiaApp({
   progress: { color: '#ed8936' },
-  title: (title) => title,
+  title: (title) => {
+    // console.log(title)
+    return title;
+  },
   resolve: (name) => {
     return resolvePageComponent(`../pages/${name}.tsx`, import.meta.glob('../pages/**/*.tsx'));
   },

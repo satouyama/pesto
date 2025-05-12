@@ -1,3 +1,4 @@
+import Empty from '@/components/common/Empty';
 import useTableData from '@/data/use_table_data';
 import { BaseMenuItem } from '@/types/customer_type';
 import { HStack, IconButton, Link, Spinner } from '@chakra-ui/react';
@@ -6,7 +7,6 @@ import Pagination from 'rc-pagination';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ProductItem from './ProductItem';
-import Empty from '@/components/common/Empty';
 
 const PAGE_SIZE = 20;
 
@@ -19,6 +19,7 @@ export default function AllProductsDisplay() {
     page,
     limit: PAGE_SIZE,
   });
+  console.log("display")
 
   // loading
   if (isLoading) {

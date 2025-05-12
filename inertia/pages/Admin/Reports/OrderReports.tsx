@@ -1,15 +1,15 @@
-import Layout from '@/components/common/Layout';
-import { useTranslation } from 'react-i18next';
-import { Divider, Badge } from '@chakra-ui/react';
-import { useState } from 'react';
-import useSWR from 'swr';
-import fetcher from '@/lib/fetcher';
-import OrderReportChart from '@/components/Admin/Reports/OrderReportChart';
-import { startCase } from '@/utils/string_formatter';
-import OrderStatusReportChart from '@/components/Admin/Reports/OrderStatusReportChart';
 import OrderByDeliveryPersonReportChart from '@/components/Admin/Reports/OrderByDeliveryReportChart';
+import OrderReportChart from '@/components/Admin/Reports/OrderReportChart';
+import OrderStatusReportChart from '@/components/Admin/Reports/OrderStatusReportChart';
 import ProductCard from '@/components/Admin/Reports/ProductCard';
+import Layout from '@/components/common/Layout';
+import fetcher from '@/lib/fetcher';
 import { OrderStatus } from '@/utils/order_status';
+import { startCase } from '@/utils/string_formatter';
+import { Badge, Divider } from '@chakra-ui/react';
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import useSWR from 'swr';
 
 const orderStatus = new OrderStatus();
 
@@ -18,6 +18,7 @@ export default function OrderReports() {
   const [selectedMonth, setSelectedMonth] = useState(
     new Date().toLocaleString('default', { month: 'long' })
   );
+  console.log(selectedMonth)
 
   // Fetch earning report
   const { data, isLoading } = useSWR('/api/reports/order-chart', fetcher);
@@ -65,7 +66,7 @@ export default function OrderReports() {
                   <Divider className="border-secondary-300 mb-6" />
 
                   <OrderReportChart
-                    periodType = 'month'
+                    periodType='month'
                     data={data}
                     isLoading={isLoading}
                     onPeriodSelect={setSelectedMonth}
@@ -79,7 +80,7 @@ export default function OrderReports() {
                   <div className="flex-1 flex flex-col gap-2">
                     <h1 className="text-secondary-900 text-2xl font-bold">{t('Orders')}</h1>
                     <h3 className="text-lg font-normal leading-[22px] text-secondary-400">
-                      {t('by status')}
+                      {t('Por status')}
                     </h3>
                   </div>
                 </div>
@@ -101,7 +102,7 @@ export default function OrderReports() {
                   <div className="flex-1 flex flex-col gap-2">
                     <h1 className="text-secondary-900 text-2xl font-bold">{t('Orders')}</h1>
                     <h3 className="text-lg font-normal leading-[22px] text-secondary-400">
-                      {t('by delivery person')}
+                      {t('Por entrega')}
                     </h3>
                   </div>
                 </div>
@@ -152,12 +153,12 @@ export default function OrderReports() {
               {!isLoading && (
                 <>
                   <ProductCard
-                      product={mostOrderedProductSelectedMonth(data, selectedMonth) || null}
-                      timePeriod={selectedMonth} 
+                    product={mostOrderedProductSelectedMonth(data, selectedMonth) || null}
+                    timePeriod={selectedMonth}
                   />
                   <ProductCard
                     product={data.mostOrderedMenuItemAllTime}
-                    timePeriod={"All Time"} 
+                    timePeriod={"All Time"}
                   />
                 </>
               )}

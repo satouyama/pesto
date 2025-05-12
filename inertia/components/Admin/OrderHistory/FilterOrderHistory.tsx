@@ -3,26 +3,26 @@ import useDebounce from '@/hooks/useDebounce';
 import { OrderStatus } from '@/utils/order_status';
 import { startCase } from '@/utils/string_formatter';
 import {
-  Menu,
-  Text,
-  Popover,
-  PopoverTrigger,
+  Box,
   Button,
-  PopoverContent,
-  PopoverBody,
+  HStack,
+  Input,
+  Menu,
   MenuButton,
+  MenuDivider,
+  MenuItemOption,
   MenuList,
   MenuOptionGroup,
-  MenuItemOption,
+  Popover,
+  PopoverBody,
+  PopoverContent,
   PopoverFooter,
-  Input,
-  MenuDivider,
-  Box,
-  HStack,
+  PopoverTrigger,
   Spinner,
+  Text,
 } from '@chakra-ui/react';
 import { t } from 'i18next';
-import { FilterSearch, ArrowDown2 } from 'iconsax-react';
+import { ArrowDown2, FilterSearch } from 'iconsax-react';
 import { useState } from 'react';
 
 // filter options types
@@ -208,7 +208,7 @@ export default function FilterOrderHistory({ filter, setFilter }: FilterProps) {
               >
                 {['true', 'false'].map((status, index) => (
                   <MenuItemOption key={index} value={status} icon={null}>
-                    {t(startCase(status === 'true' ? 'Paid' : 'Unpaid'))}
+                    {t(startCase(status === 'true' ? 'Pago' : 'Não pago'))}
                   </MenuItemOption>
                 ))}
               </MenuOptionGroup>
@@ -233,7 +233,7 @@ export default function FilterOrderHistory({ filter, setFilter }: FilterProps) {
               <Input
                 type="search"
                 name="customerSearch"
-                placeholder={t('Search...')}
+                placeholder={t('Buscar...')}
                 value={customerSearch}
                 onChange={(e) => setCustomerSearch(e.target.value)}
               />
@@ -290,7 +290,7 @@ export default function FilterOrderHistory({ filter, setFilter }: FilterProps) {
               <Input
                 type="search"
                 name="deliveryManName"
-                placeholder={t('Search...')}
+                placeholder={t('Buscar...')}
                 value={deliveryManSearch}
                 onChange={(e) => setDeliveryManSearch(e.target.value)}
               />

@@ -2,6 +2,7 @@ import DataTable from '@/components/common/DataTable';
 import { Spinner, Text } from '@chakra-ui/react';
 import { SortingState } from '@tanstack/react-table';
 import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -62,7 +63,7 @@ export default function ExistingReservations({
                   cell: ({ row }) => (
                     <div className="space-y-1 text-sm">
                       <p className="font-bold">
-                        {format(row.original?.reservationDate, 'dd MMM yyyy')}
+                        {format(row.original?.reservationDate, 'dd MMM yyyy', { locale: ptBR })}
                       </p>
                       <Text as="p">{`${row.original?.startTime} to ${row.original?.startTime}`}</Text>
                     </div>

@@ -1,27 +1,28 @@
-import { useField } from 'formik';
 import {
+  Box,
+  Button,
   FormControl,
+  FormErrorMessage,
   FormLabel,
+  IconButton,
   Input,
   InputGroup,
-  InputRightElement,
-  FormErrorMessage,
-  Switch,
-  Button,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  IconButton,
-  Box,
-  Spinner,
   InputLeftElement,
+  InputRightElement,
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+  Spinner,
+  Switch,
 } from '@chakra-ui/react';
+import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
+import { useField } from 'formik';
+import { ArrowLeft2, ArrowRight2, Calendar, Clock, SearchNormal1 } from 'iconsax-react';
+import { useState } from 'react';
+import DatePicker from 'react-datepicker';
 import { useTranslation } from 'react-i18next';
 import { match } from 'ts-pattern';
-import DatePicker from 'react-datepicker';
-import { format } from 'date-fns';
-import {  Calendar, Clock, ArrowLeft2, ArrowRight2, SearchNormal1 } from 'iconsax-react';
-import { useState } from 'react';
 
 const ReservationFieldRenderer = ({
   item,
@@ -149,7 +150,7 @@ const ReservationFieldRenderer = ({
                     variant="outline"
                     className="text-left justify-between text-black font-normal w-full bg-transparent border-secondary-200"
                   >
-                    {format(values.reservationDate, 'dd MMM yyyy') || t('Select date')}
+                    {format(values.reservationDate, 'dd MMM yyyy', { locale: ptBR }) || t('Select date')}
                   </Button>
                 </PopoverTrigger>
                 <PopoverContent className="p-4 max-w-72">
@@ -171,7 +172,7 @@ const ReservationFieldRenderer = ({
                       }) => (
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-base font-medium text-secondary-700">
-                            {format(date, 'MMM yyyy')}
+                            {format(date, 'MMM yyyy', { locale: ptBR })}
                           </span>
 
                           <div className="space-x-2">

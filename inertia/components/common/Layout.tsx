@@ -1,3 +1,4 @@
+import useWindowSize from '@/hooks/useWindowSize';
 import { PageProps, User } from '@/types';
 import {
   Container,
@@ -9,11 +10,10 @@ import {
 } from '@chakra-ui/react';
 import { Head, usePage } from '@inertiajs/react';
 import React, { useEffect, useState } from 'react';
+import { toast } from 'sonner';
+import { useSWRConfig } from 'swr';
 import Header from './Header';
 import SideNav from './SideNav';
-import useWindowSize from '@/hooks/useWindowSize';
-import { useSWRConfig } from 'swr';
-import { toast } from 'sonner';
 
 export default function Layout({
   children,
@@ -87,6 +87,8 @@ export default function Layout({
       </div>
     );
   }
+
+  // console.log(branding?.business)
 
   return (
     <>

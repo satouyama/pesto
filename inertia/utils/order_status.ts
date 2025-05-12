@@ -8,6 +8,42 @@ export type TOrderStatus = {
   prev: string | null;
 };
 
+
+export const OrderTypeMap = {
+  dine_in: 'comer no local',
+  delivery: 'entrega',
+  pickup: 'retirada',
+} as const
+
+
+export const OrderPaymentTypeMap = {
+  cash: 'dinheiro',
+  card: 'cartao',
+  paypal: 'paypal',
+  stripe: 'stripe',
+  paid: 'pago'
+} as const
+
+
+export type OrderTypeKey = keyof typeof OrderTypeMap
+
+export type OrderOrderPaymentTypeKey = keyof typeof OrderPaymentTypeMap
+
+export function mapOrderTypeStatus(raw: string): string {
+  const key = (raw as OrderTypeKey) in OrderTypeMap
+    ? (raw as OrderTypeKey)
+    : 'delivery'
+
+  return OrderTypeMap[key]
+}
+
+export function mapPaymentType(raw: string): string {
+  const key = (raw as OrderOrderPaymentTypeKey) in OrderPaymentTypeMap
+    ? (raw as OrderOrderPaymentTypeKey)
+    : 'cash'
+
+  return OrderPaymentTypeMap[key]
+}
 export class OrderStatus {
   orderStatus = new Map(
     Object.entries({

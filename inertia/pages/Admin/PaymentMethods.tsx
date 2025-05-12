@@ -21,7 +21,7 @@ type PaymentMethod = {
   updatedAt: string;
   webhook: string;
 };
-const PaymentMethods = ({ data }: {data: PaymentMethod[]}) => {
+const PaymentMethods = ({ data }: { data: PaymentMethod[] }) => {
   const { t } = useTranslation();
 
   return (
@@ -31,17 +31,17 @@ const PaymentMethods = ({ data }: {data: PaymentMethod[]}) => {
           <Flex className="justify-between w-full overflow-x-auto">
             <TabList className="whitespace-nowrap">
               {data?.map((item: PaymentMethod) => (
-                <Tab key={item.id}>{item.name}</Tab>
+                <Tab key={item?.id}>{item?.name}</Tab>
               ))}
             </TabList>
           </Flex>
 
           <TabPanels>
-              {data?.map((item: PaymentMethod) => (
-                <TabPanel>
-                  <PaymentMethod paymentMethod={item} />
-                </TabPanel>
-              ))}
+            {data?.map((item: PaymentMethod) => (
+              <TabPanel>
+                <PaymentMethod paymentMethod={item} />
+              </TabPanel>
+            ))}
           </TabPanels>
         </Tabs>
       </div>

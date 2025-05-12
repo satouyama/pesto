@@ -6,7 +6,7 @@ import Layout from '@/components/common/Layout';
 import useTableData from '@/data/use_table_data';
 import useDebounce from '@/hooks/useDebounce';
 import { convertToCurrencyFormat } from '@/utils/currency_formatter';
-import { OrderStatus } from '@/utils/order_status';
+import { mapPaymentType, OrderStatus } from '@/utils/order_status';
 import { Badge, Box, HStack, Text } from '@chakra-ui/react';
 import { SortingState } from '@tanstack/react-table';
 import { useState } from 'react';
@@ -140,13 +140,13 @@ export default function OrderHistory() {
                         variant="solid"
                         colorScheme={Boolean(row.original.paymentStatus) ? 'green' : 'secondary'}
                       >
-                        {Boolean(row.original.paymentStatus) ? 'paid' : 'unpaid'}
+                        {Boolean(row.original.paymentStatus) ? 'pago' : 'não pago'}
                       </Badge>
                       <Badge
                         variant="subtle"
                         colorScheme={row.original.paymentType === 'cash' ? 'primary' : 'blue'}
                       >
-                        {t(row.original.paymentType)}
+                        {t(mapPaymentType(row.original.paymentType))}
                       </Badge>
                     </HStack>
                   );

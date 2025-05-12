@@ -1,4 +1,8 @@
-import { useState } from 'react';
+import OrderCard from '@/components/Admin/ActiveOrders/OrderCard';
+import OrderDetailsSidebar from '@/components/Admin/ActiveOrders/OrderDetailsSidebar';
+import Layout from '@/components/common/Layout';
+import useDebounce from '@/hooks/useDebounce';
+import fetcher from '@/lib/fetcher';
 import {
   Accordion,
   AccordionButton,
@@ -18,13 +22,9 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { SearchNormal } from 'iconsax-react';
-import Layout from '@/components/common/Layout';
-import OrderCard from '@/components/Admin/ActiveOrders/OrderCard';
-import OrderDetailsSidebar from '@/components/Admin/ActiveOrders/OrderDetailsSidebar';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import useDebounce from '@/hooks/useDebounce';
 import useSWR from 'swr';
-import fetcher from '@/lib/fetcher';
 import { match, P } from 'ts-pattern';
 
 export default function ActiveOrders() {
@@ -95,7 +95,7 @@ export default function ActiveOrders() {
                   <Tab>{t('Pending')}</Tab>
                   <Tab>{t('Processing')}</Tab>
                   <Tab>{t('Ready')}</Tab>
-                  <Tab>{t('On delivery')}</Tab>
+                  <Tab>{t('Para entrega')}</Tab>
                 </TabList>
               </div>
               {!isOpen && (

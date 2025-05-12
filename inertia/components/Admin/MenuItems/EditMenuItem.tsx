@@ -1,3 +1,4 @@
+import useWindowSize from '@/hooks/useWindowSize';
 import EditMenuItemSchema from '@/schemas/EditMenuItemSchema';
 import {
   Box,
@@ -18,10 +19,9 @@ import axios from 'axios';
 import { Form, Formik } from 'formik';
 import { ArrowLeft, ArrowRight, Edit2, MoreCircle, TickCircle } from 'iconsax-react';
 import { useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { toast } from 'sonner';
 import MenuItemFormFieldRenderer from './MenuItemFormFieldRenderer';
-import { useTranslation } from 'react-i18next';
-import useWindowSize from '@/hooks/useWindowSize';
 
 const initSteps = [
   { id: 'information', title: 'Basic information and pricing', isComplete: true },
@@ -52,18 +52,18 @@ export default function EditMenuItem({
         { name: 'description', type: 'textarea', placeholder: 'Item description' },
         {
           name: 'image',
-          label: 'Item image',
+          label: t('Item image'),
           type: 'file',
           previewImage: editData?.image?.url ?? '',
         },
         { name: 'categoryId', label: 'Category', type: 'combobox-category' },
         {
           name: 'foodType',
-          label: 'Food type',
+          label: t('Food type'),
           type: 'radio-group',
           options: [
-            { label: 'Veg', value: 'veg' },
-            { label: 'Non-veg', value: 'nonVeg' },
+            { label: t('Veg'), value: 'veg' },
+            { label: t('Non-veg'), value: 'nonVeg' },
           ],
         },
       ],
@@ -79,13 +79,13 @@ export default function EditMenuItem({
           type: 'radio-group',
           placeholder: '',
           options: [
-            { label: 'Amount ($)', value: 'amount' },
-            { label: 'Percentage (%)', value: 'percentage' },
+            { label: t('Amount ($)'), value: 'amount' },
+            { label: t('Percentage (%)'), value: 'percentage' },
           ],
         },
         {
           name: 'chargeIds',
-          label: 'Add tax and charges',
+          label: t('Add tax and charges'),
           type: 'tag-charges',
           placeholder: 'Search or add',
         },
@@ -295,9 +295,9 @@ export default function EditMenuItem({
                             s.map((v) =>
                               v.id === 'information'
                                 ? {
-                                    ...v,
-                                    isComplete: true,
-                                  }
+                                  ...v,
+                                  isComplete: true,
+                                }
                                 : v
                             )
                           );

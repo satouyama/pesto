@@ -1,6 +1,6 @@
-import axios from 'axios';
+import useDebounce from '@/hooks/useDebounce';
+import fetcher from '@/lib/fetcher';
 import NewCustomerSchema from '@/schemas/NewCustomerSchema';
-import { Field, Formik } from 'formik';
 import {
   Button,
   Flex,
@@ -18,13 +18,13 @@ import {
   Text,
   useBoolean,
 } from '@chakra-ui/react';
-import { useTranslation } from 'react-i18next';
+import axios from 'axios';
+import { Field, Formik } from 'formik';
 import { Add, Minus } from 'iconsax-react';
-import { toast } from 'sonner';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { toast } from 'sonner';
 import useSWR from 'swr';
-import fetcher from '@/lib/fetcher';
-import useDebounce from '@/hooks/useDebounce';
 import { match, P } from 'ts-pattern';
 
 // Customer creation form fields
@@ -186,7 +186,7 @@ export default function CustomerSelection({
         <PopoverHeader className="border-black/[6%]">
           <Input
             type="search"
-            placeholder={t('Search...')}
+            placeholder={t('Buscar...')}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             autoFocus

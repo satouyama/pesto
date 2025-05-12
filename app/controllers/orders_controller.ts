@@ -1,6 +1,13 @@
 import errorHandler from '#exceptions/error_handler';
+import BusinessSetup from '#models/business_setup';
 import MenuItem from '#models/menu_item';
 import Order from '#models/order';
+import OrderItem from '#models/order_item';
+import PaymentMethod from '#models/payment_method';
+import Setting from '#models/setting';
+import notification_service from '#services/notification_service';
+import Paypal from '#services/payment/paypal';
+import StripePayment from '#services/payment/stripe';
 import {
   bulkCustomUpdateValidator,
   customUpdateValidator,
@@ -9,17 +16,10 @@ import {
   orderValidator,
 } from '#validators/order';
 import type { HttpContext } from '@adonisjs/core/http';
+import transmit from '@adonisjs/transmit/services/main';
+import { stringify } from 'csv-stringify/sync';
 import { DateTime } from 'luxon';
 import Roles from '../enum/roles.js';
-import BusinessSetup from '#models/business_setup';
-import notification_service from '#services/notification_service';
-import { stringify } from 'csv-stringify/sync';
-import Setting from '#models/setting';
-import Paypal from '#services/payment/paypal';
-import StripePayment from '#services/payment/stripe';
-import PaymentMethod from '#models/payment_method';
-import transmit from '@adonisjs/transmit/services/main';
-import OrderItem from '#models/order_item';
 
 type VariantType = { id: number; optionIds: Array<number> };
 type AddonType = { id: number; quantity: number };
@@ -211,7 +211,7 @@ export default class OrdersController {
       const orderItems: OrderItem[] = order.orderItems.map((ele: any) => {
         const data = ele.serialize({ fields: { emit: ['variants', 'addons', 'charges'] } });
 
-        let parsedCharges: Charge[] = JSON.parse(ele.charges) || [];
+        let parsedCharges: Charge[] = ele.charges || [];
 
         const aggregatedCharges = parsedCharges.reduce<Record<string, Charge>>((acc, charge) => {
           if (!charge || !charge.name) return acc;
@@ -225,8 +225,8 @@ export default class OrdersController {
           return acc;
         }, {});
 
-        let parsedVariants = JSON.parse(ele.variants) || [];
-        let parsedAddons = JSON.parse(ele.addons) || [];
+        let parsedVariants = ele.variants || [];
+        let parsedAddons = ele.addons || [];
 
         return {
           ...data,

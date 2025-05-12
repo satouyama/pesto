@@ -1,0 +1,1786 @@
+{
+  "translations": [
+    {
+      "id": 188,
+      "code": "pt",
+      "key": "View all food items",
+      "value": "Ver todos os itens de comida",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 189,
+      "code": "pt",
+      "key": "Search",
+      "value": "Pesquisar",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 190,
+      "code": "pt",
+      "key": "Login",
+      "value": "Entrar",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 191,
+      "code": "pt",
+      "key": "Sign Up",
+      "value": "Cadastrar-se",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 192,
+      "code": "pt",
+      "key": "ITEMS",
+      "value": "ITENS",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 193,
+      "code": "pt",
+      "key": "Select order type",
+      "value": "Selecionar tipo de pedido",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 194,
+      "code": "pt",
+      "key": "QTY",
+      "value": "Qtd.",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 195,
+      "code": "pt",
+      "key": "PRICE",
+      "value": "Preço",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 196,
+      "code": "pt",
+      "key": "TOTAL",
+      "value": "Total",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 197,
+      "code": "pt",
+      "key": "Empty cart",
+      "value": "Esvaziar carrinho",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 198,
+      "code": "pt",
+      "key": "Subtotal",
+      "value": "Subtotal",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 199,
+      "code": "pt",
+      "key": "Order note",
+      "value": "Observação do pedido",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 200,
+      "code": "pt",
+      "key": "Write a note for the order...",
+      "value": "Escreva uma observação para o pedido...",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 201,
+      "code": "pt",
+      "key": "CLOSE",
+      "value": "Fechar",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 202,
+      "code": "pt",
+      "key": "CHECKOUT",
+      "value": "Finalizar compra",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 203,
+      "code": "pt",
+      "key": "Latest additions",
+      "value": "Últimos adicionados",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 204,
+      "code": "pt",
+      "key": "left arrow",
+      "value": "seta para a esquerda",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 205,
+      "code": "pt",
+      "key": "right arrow",
+      "value": "seta para a direita",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 206,
+      "code": "pt",
+      "key": "About us",
+      "value": "Sobre nós",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 207,
+      "code": "pt",
+      "key": "Contact us",
+      "value": "Fale conosco",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 208,
+      "code": "pt",
+      "key": "Terms and conditions",
+      "value": "Termos e condições",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 209,
+      "code": "pt",
+      "key": "Privacy policy",
+      "value": "Política de privacidade",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 210,
+      "code": "pt",
+      "key": "Return policy",
+      "value": "Política de devolução",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 211,
+      "code": "pt",
+      "key": "Welcome",
+      "value": "Bem-vindo",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 212,
+      "code": "pt",
+      "key": "Sign up or sign in to continue",
+      "value": "Cadastre-se ou entre para continuar",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 213,
+      "code": "pt",
+      "key": "Email",
+      "value": "E-mail",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 214,
+      "code": "pt",
+      "key": "Enter your email",
+      "value": "Digite seu e-mail",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 215,
+      "code": "pt",
+      "key": "Password",
+      "value": "Senha",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 216,
+      "code": "pt",
+      "key": "Enter password",
+      "value": "Digite sua senha",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 217,
+      "code": "pt",
+      "key": "Remember me",
+      "value": "Lembrar de mim",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 218,
+      "code": "pt",
+      "key": "Forgot password?",
+      "value": "Esqueceu a senha?",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 219,
+      "code": "pt",
+      "key": "Enter your first name",
+      "value": "Digite seu primeiro nome",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 220,
+      "code": "pt",
+      "key": "Enter your last name",
+      "value": "Digite seu sobrenome",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 221,
+      "code": "pt",
+      "key": "Enter your phone",
+      "value": "Digite seu telefone",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 222,
+      "code": "pt",
+      "key": "Enter your address",
+      "value": "Digite seu endereço",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 223,
+      "code": "pt",
+      "key": "Re-enter password",
+      "value": "Redigite a senha",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 224,
+      "code": "pt",
+      "key": "Email is required",
+      "value": "E-mail é obrigatório",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 225,
+      "code": "pt",
+      "key": "Password is required",
+      "value": "Senha é obrigatória",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 226,
+      "code": "pt",
+      "key": "Dashboard",
+      "value": "Painel",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 227,
+      "code": "pt",
+      "key": "Hello",
+      "value": "Olá",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 228,
+      "code": "pt",
+      "key": "Today is",
+      "value": "Hoje é",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 229,
+      "code": "pt",
+      "key": "Order analytics",
+      "value": "Análise de pedidos",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 230,
+      "code": "pt",
+      "key": "Today",
+      "value": "Hoje",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 231,
+      "code": "pt",
+      "key": "This Week",
+      "value": "Esta semana",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 232,
+      "code": "pt",
+      "key": "This Month",
+      "value": "Este mês",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 233,
+      "code": "pt",
+      "key": "Lifetime",
+      "value": "Tempo total",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 234,
+      "code": "pt",
+      "key": "Pending",
+      "value": "Pendente",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 235,
+      "code": "pt",
+      "key": "Processing",
+      "value": "Processando",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 236,
+      "code": "pt",
+      "key": "Ready",
+      "value": "Pronto",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 237,
+      "code": "pt",
+      "key": "On Delivery",
+      "value": "Em entrega",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 238,
+      "code": "pt",
+      "key": "Failed",
+      "value": "Falhou",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 239,
+      "code": "pt",
+      "key": "Cancelled",
+      "value": "Cancelado",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 240,
+      "code": "pt",
+      "key": "Completed",
+      "value": "Concluído",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 241,
+      "code": "pt",
+      "key": "Recent Orders",
+      "value": "Pedidos recentes",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 242,
+      "code": "pt",
+      "key": "Recent Reservations",
+      "value": "Reservas recentes",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 243,
+      "code": "pt",
+      "key": "POS",
+      "value": "PDV",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 244,
+      "code": "pt",
+      "key": "Reservation",
+      "value": "Reserva",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 245,
+      "code": "pt",
+      "key": "Order management",
+      "value": "Gerenciamento de pedidos",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 246,
+      "code": "pt",
+      "key": "Active orders",
+      "value": "Pedidos Ativos",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 247,
+      "code": "pt",
+      "key": "Order status",
+      "value": "Status do pedido",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 248,
+      "code": "pt",
+      "key": "Order history",
+      "value": "Historico de pedido",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 249,
+      "code": "pt",
+      "key": "Active reservations",
+      "value": "Reservas ativas",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 250,
+      "code": "pt",
+      "key": "Reservation history",
+      "value": "Histórico de reservas",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 251,
+      "code": "pt",
+      "key": "Menu management",
+      "value": "Gerenciamento de menu",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 252,
+      "code": "pt",
+      "key": "Menu items",
+      "value": "Itens do menu",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 253,
+      "code": "pt",
+      "key": "Add-on items",
+      "value": "Itens adicionais",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 254,
+      "code": "pt",
+      "key": "Categories",
+      "value": "Categorias",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 255,
+      "code": "pt",
+      "key": "Promotions",
+      "value": "Promoções",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 256,
+      "code": "pt",
+      "key": "Tax and charges",
+      "value": "Taxas e encargos",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 257,
+      "code": "pt",
+      "key": "Report and analysis",
+      "value": "Relatórios e análises",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 258,
+      "code": "pt",
+      "key": "Earning report",
+      "value": "Relatório de ganhos",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 259,
+      "code": "pt",
+      "key": "Order report",
+      "value": "Relatório de pedidos",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 260,
+      "code": "pt",
+      "key": "User management",
+      "value": "Gerenciamento de usuários",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 261,
+      "code": "pt",
+      "key": "Customers",
+      "value": "Clientes",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 262,
+      "code": "pt",
+      "key": "Delivery person",
+      "value": "Entregador",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 263,
+      "code": "pt",
+      "key": "Employees",
+      "value": "Funcionários",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 264,
+      "code": "pt",
+      "key": "System",
+      "value": "Sistema",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 265,
+      "code": "pt",
+      "key": "Languages",
+      "value": "Idiomas",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 266,
+      "code": "pt",
+      "key": "Payment Methods",
+      "value": "Métodos de pagamento",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 267,
+      "code": "pt",
+      "key": "Settings",
+      "value": "Configurações",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 268,
+      "code": "pt",
+      "key": "Toggle",
+      "value": "Alternar",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 269,
+      "code": "pt",
+      "key": "Profile",
+      "value": "Perfil",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 270,
+      "code": "pt",
+      "key": "Customer view",
+      "value": "Visão do cliente",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 271,
+      "code": "pt",
+      "key": "Notification",
+      "value": "Notificação",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 272,
+      "code": "pt",
+      "key": "Logout",
+      "value": "Sair",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 273,
+      "code": "pt",
+      "key": "Notifications",
+      "value": "Notificações",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 274,
+      "code": "pt",
+      "key": "Mark all as read",
+      "value": "Marcar todos como lidos",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 275,
+      "code": "pt",
+      "key": "Profile information",
+      "value": "Informações do perfil",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 276,
+      "code": "pt",
+      "key": "Total Orders",
+      "value": "Total de pedidos",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 277,
+      "code": "pt",
+      "key": "Showing result for",
+      "value": "Exibindo resultado para",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 278,
+      "code": "pt",
+      "key": "sexta-feira",
+      "value": "sexta-feira",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 279,
+      "code": "pt",
+      "key": "Total Sale",
+      "value": "Total de vendas",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 280,
+      "code": "pt",
+      "key": "No notifications found",
+      "value": "Nenhuma notificação encontrada",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 281,
+      "code": "pt",
+      "key": "No data found!",
+      "value": "Nenhum dado encontrado!",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 283,
+      "code": "pt",
+      "key": "Manage languages",
+      "value": "Gerenciar idiomas",
+      "created_at": "2025-05-09 21:51:54",
+      "updated_at": "2025-05-09 21:51:54"
+    },
+    {
+      "id": 284,
+      "code": "pt",
+      "key": "Save",
+      "value": "Salvar",
+      "created_at": "2025-05-09 21:51:54",
+      "updated_at": "2025-05-09 21:51:54"
+    },
+    {
+      "id": 285,
+      "code": "pt",
+      "key": "Enter language name",
+      "value": "Digite o nome do idioma",
+      "created_at": "2025-05-09 21:51:54",
+      "updated_at": "2025-05-09 21:51:54"
+    },
+    {
+      "id": 286,
+      "code": "pt",
+      "key": "Enter language code",
+      "value": "Digite o código do idioma",
+      "created_at": "2025-05-09 21:51:54",
+      "updated_at": "2025-05-09 21:51:54"
+    },
+    {
+      "id": 287,
+      "code": "pt",
+      "key": "Add New language",
+      "value": "Adicionar novo idioma",
+      "created_at": "2025-05-09 21:51:54",
+      "updated_at": "2025-05-09 21:51:54"
+    },
+    {
+      "id": 288,
+      "code": "pt",
+      "key": "Update profile",
+      "value": "Atualizar perfil",
+      "created_at": "2025-05-09 21:52:04",
+      "updated_at": "2025-05-09 21:52:04"
+    },
+    {
+      "id": 289,
+      "code": "pt",
+      "key": "First name",
+      "value": "Nome",
+      "created_at": "2025-05-09 21:52:04",
+      "updated_at": "2025-05-09 21:52:04"
+    },
+    {
+      "id": 290,
+      "code": "pt",
+      "key": "Last name",
+      "value": "Sobrenome",
+      "created_at": "2025-05-09 21:52:04",
+      "updated_at": "2025-05-09 21:52:04"
+    },
+    {
+      "id": 291,
+      "code": "pt",
+      "key": "Phone",
+      "value": "Telefone",
+      "created_at": "2025-05-09 21:52:04",
+      "updated_at": "2025-05-09 21:52:04"
+    },
+    {
+      "id": 292,
+      "code": "pt",
+      "key": "Address",
+      "value": "Endereço",
+      "created_at": "2025-05-09 21:52:04",
+      "updated_at": "2025-05-09 21:52:04"
+    },
+    {
+      "id": 293,
+      "code": "pt",
+      "key": "Update password",
+      "value": "Atualizar senha",
+      "created_at": "2025-05-09 21:52:04",
+      "updated_at": "2025-05-09 21:52:04"
+    },
+    {
+      "id": 294,
+      "code": "pt",
+      "key": "Current password",
+      "value": "Senha atual",
+      "created_at": "2025-05-09 21:52:04",
+      "updated_at": "2025-05-09 21:52:04"
+    },
+    {
+      "id": 295,
+      "code": "pt",
+      "key": "Enter new password",
+      "value": "Digite a nova senha",
+      "created_at": "2025-05-09 21:52:04",
+      "updated_at": "2025-05-09 21:52:04"
+    },
+    {
+      "id": 296,
+      "code": "pt",
+      "key": "Confirm password",
+      "value": "Confirmar senha",
+      "created_at": "2025-05-09 21:52:04",
+      "updated_at": "2025-05-09 21:52:04"
+    },
+    {
+      "id": 298,
+      "code": "pt",
+      "key": "Editing",
+      "value": "Editando",
+      "created_at": "2025-05-09 22:00:37",
+      "updated_at": "2025-05-09 22:00:37"
+    },
+    {
+      "id": 299,
+      "code": "pt",
+      "key": "Editing - pt",
+      "value": "Editando - pt",
+      "created_at": "2025-05-09 22:00:37",
+      "updated_at": "2025-05-09 22:00:37"
+    },
+    {
+      "id": 300,
+      "code": "pt",
+      "key": "Create translation",
+      "value": "Criar tradução",
+      "created_at": "2025-05-09 22:00:37",
+      "updated_at": "2025-05-09 22:00:37"
+    },
+    {
+      "id": 301,
+      "code": "pt",
+      "key": "Add",
+      "value": "Adicionar",
+      "created_at": "2025-05-09 22:00:37",
+      "updated_at": "2025-05-09 22:00:37"
+    },
+    {
+      "id": 302,
+      "code": "pt",
+      "key": "translation",
+      "value": "tradução",
+      "created_at": "2025-05-09 22:00:37",
+      "updated_at": "2025-05-09 22:00:37"
+    },
+    {
+      "id": 303,
+      "code": "pt",
+      "key": "Id",
+      "value": "ID",
+      "created_at": "2025-05-09 22:00:37",
+      "updated_at": "2025-05-09 22:00:37"
+    },
+    {
+      "id": 304,
+      "code": "pt",
+      "key": "Key",
+      "value": "Chave",
+      "created_at": "2025-05-09 22:00:37",
+      "updated_at": "2025-05-09 22:00:37"
+    },
+    {
+      "id": 305,
+      "code": "pt",
+      "key": "Value",
+      "value": "Valor",
+      "created_at": "2025-05-09 22:00:37",
+      "updated_at": "2025-05-09 22:00:37"
+    },
+    {
+      "id": 306,
+      "code": "pt",
+      "key": "Actions",
+      "value": "Ações",
+      "created_at": "2025-05-09 22:00:37",
+      "updated_at": "2025-05-09 22:00:37"
+    },
+    {
+      "id": 307,
+      "code": "pt",
+      "key": "Delete",
+      "value": "Excluir",
+      "created_at": "2025-05-09 22:00:37",
+      "updated_at": "2025-05-09 22:00:37"
+    },
+    {
+      "id": 308,
+      "code": "pt",
+      "key": "Delete translation",
+      "value": "Excluir tradução",
+      "created_at": "2025-05-09 22:00:37",
+      "updated_at": "2025-05-09 22:00:37"
+    },
+    {
+      "id": 309,
+      "code": "pt",
+      "key": "Are you sure you want to delete this translation?",
+      "value": "Tem certeza de que deseja excluir esta tradução?",
+      "created_at": "2025-05-09 22:00:37",
+      "updated_at": "2025-05-09 22:00:37"
+    },
+    {
+      "id": 310,
+      "code": "pt",
+      "key": "Cancel",
+      "value": "Cancelar",
+      "created_at": "2025-05-09 22:00:37",
+      "updated_at": "2025-05-09 22:00:37"
+    },
+    {
+      "id": 311,
+      "code": "pt",
+      "key": "Edit",
+      "value": "Editar",
+      "created_at": "2025-05-09 22:00:37",
+      "updated_at": "2025-05-09 22:00:37"
+    },
+    {
+      "id": 312,
+      "code": "pt",
+      "key": "Showing {{start}}-{{end}} of {{total}}",
+      "value": "Mostrando {{start}}-{{end}} de {{total}}",
+      "created_at": "2025-05-09 22:00:37",
+      "updated_at": "2025-05-09 22:00:37"
+    },
+    {
+      "id": 313,
+      "code": "pt",
+      "key": "Language updated successfully",
+      "value": "Idioma atualizado com sucesso",
+      "created_at": "2025-05-09 22:06:06",
+      "updated_at": "2025-05-09 22:06:06"
+    },
+    {
+      "code": "pt",
+      "key": "Customer name",
+      "value": "Nome do Cliente",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Contact Number",
+      "value": "Número de contato",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Acc. Status",
+      "value": "Status da conta",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Customer information",
+      "value": "Informações do cliente",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Number of people",
+      "value": "Número de pessoas",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Write customer note",
+      "value": "Anotações do cliente",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Date and time",
+      "value": "Data e hora",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "On Delivery",
+      "value": "Para entrega",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Menu Items",
+      "value": "Itens do menu",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Items",
+      "value": "Itens",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Variants",
+      "value": "Variantes",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Filter",
+      "value": "Filtrar",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Search",
+      "value": "Pesquisar",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Create new item",
+      "value": "Criar novo item",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Export",
+      "value": "Exportar",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "SL",
+      "value": "SL",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Item Name",
+      "value": "Nome do item",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Price",
+      "value": "Preço",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 324,
+      "code": "pt",
+      "key": "Discount",
+      "value": "Desconto",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 325,
+      "code": "pt",
+      "key": "Addons",
+      "value": "Adicionais",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 326,
+      "code": "pt",
+      "key": "Food Type",
+      "value": "Tipo de comida",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 327,
+      "code": "pt",
+      "key": "Recommended",
+      "value": "Recomendado",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 328,
+      "code": "pt",
+      "key": "Availability",
+      "value": "Disponibilidade",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 329,
+      "code": "pt",
+      "key": "Actions",
+      "value": "Ações",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 330,
+      "code": "pt",
+      "key": "View",
+      "value": "Ver",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Yes",
+      "value": "Sim",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Non-Veg",
+      "value": "Não vegetariano",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Price",
+      "value": "Preço",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 333,
+      "code": "pt",
+      "key": "Basic information and pricing",
+      "value": "Informações básicas e preços",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 334,
+      "code": "pt",
+      "key": "Variation and add-ons",
+      "value": "Variações e complementos",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 335,
+      "code": "pt",
+      "key": "Basic information",
+      "value": "Informações básicas",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 336,
+      "code": "pt",
+      "key": "Item description",
+      "value": "Descrição do item",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 337,
+      "code": "pt",
+      "key": "Item image",
+      "value": "Imagem do item",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 338,
+      "code": "pt",
+      "key": "Drag and drop files here or upload",
+      "value": "Arraste e solte arquivos aqui ou faça o upload",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 339,
+      "code": "pt",
+      "key": "Max file size is 500kb. Supported file types are .jpg and .png.",
+      "value": "Tamanho máximo do arquivo é 500 kb. Tipos suportados: .jpg e .png.",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 340,
+      "code": "pt",
+      "key": "Category",
+      "value": "Categoria",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 341,
+      "code": "pt",
+      "key": "Search or select",
+      "value": "Pesquisar ou selecionar",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 342,
+      "code": "pt",
+      "key": "Veg",
+      "value": "Vegetariano",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 343,
+      "code": "pt",
+      "key": "Pricing",
+      "value": "Preços",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 344,
+      "code": "pt",
+      "key": "Enter regular price",
+      "value": "Digite o preço regular",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "id": 345,
+      "code": "pt",
+      "key": "Next",
+      "value": "Próximo",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Amount",
+      "value": "Valor",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Percentage",
+      "value": "Percentual",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Discount type",
+      "value": "Tipo de desconto",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Discount type",
+      "value": "Tipo de desconto",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Amount ($)",
+      "value": "Valor (R$)",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Percentage (%)",
+      "value": "Percentual (%)",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "My Orders",
+      "value": "Meus pedidos",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "My Profile",
+      "value": "Meu perfil",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Order no",
+      "value": "Pedido nº",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Unpaid",
+      "value": "Não pago",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Invoice",
+      "value": "Fatura",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Delivery",
+      "value": "Entrega",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Select order type",
+      "value": "Selecionar tipo de pedido",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Delivery",
+      "value": "Entrega",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Pick-up",
+      "value": "Retirada",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Items",
+      "value": "Itens",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "QTY",
+      "value": "Qtd.",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "PRICE",
+      "value": "Preço",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "TOTAL",
+      "value": "Total",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Empty cart",
+      "value": "Esvaziar carrinho",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Subtotal",
+      "value": "Subtotal",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Delivery Charge",
+      "value": "Taxa de entrega",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Order note",
+      "value": "Observação do pedido",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Write a note for the order...",
+      "value": "Escreva uma observação para o pedido...",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Close",
+      "value": "Fechar",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "CHECKOUT",
+      "value": "Finalizar compra",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "ADD TO BAG",
+      "value": "Adicionar no carrinho",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Add to bag",
+      "value": "Adicionar no carrinho",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Delivery charge",
+      "value": "Taxa de entrega",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Payment method",
+      "value": "Metodo de pagamento",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Confirm order",
+      "value": "Confirmar pedido",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Delivery address",
+      "value": "Endereço de entrega",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Your order has been placed!",
+      "value": "Seu pedido foi feito com sucesso!",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Congratulations! We've received your order.",
+      "value": "Parabéns! Recebemos o seu pedido.",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Back to home",
+      "value": "Voltar para o ínicio",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Track order",
+      "value": "Acompanhar pedido",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "On delivery",
+      "value": "Para entrega",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Select delivery person",
+      "value": "Selecione o entregador",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Pickup",
+      "value": "Retirada",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Type",
+      "value": "Tipo",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Action",
+      "value": "Ação",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Created on",
+      "value": "Criado em",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Order No",
+      "value": "Nº do pedido",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "pickup",
+      "value": "Retirada",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "cash",
+      "value": "Dinheiro",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "paid",
+      "value": "Pago",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Accepted order types",
+      "value": "Aceitar pedido do tipo",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Select currency",
+      "value": "Selecionar tipo de moeda",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Select currency",
+      "value": "Selecionar tipo de moeda",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Select currency",
+      "value": "Selecionar tipo de moeda",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "First name",
+      "value": "Primeiro nome",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Sobrenome",
+      "value": "Selecionar tipo de moeda",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Orders",
+      "value": "Pedidos",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Canceled",
+      "value": "Cancelado",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Returned",
+      "value": "Retornado",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Make reservation",
+      "value": "Fazer reserva",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Existing reservations",
+      "value": "Reservas existentes",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Table number",
+      "value": "Numero da mesa",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Customer",
+      "value": "Cliente",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Time & Date",
+      "value": "Data e hora",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "People",
+      "value": "Pessoa",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Table",
+      "value": "Mesa",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Reservation / Create",
+      "value": "Reserva / Criar",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "PAID",
+      "value": "Pago",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "UNPAID",
+      "value": "Não Pago",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Paid",
+      "value": "Pago",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Unpaid",
+      "value": "Não Pago",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Required",
+      "value": "Obrigatório",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    },
+    {
+      "code": "pt",
+      "key": "Optional",
+      "value": "Opcional",
+      "created_at": "2025-05-09 21:51:41",
+      "updated_at": "2025-05-09 21:51:41"
+    }
+  ]
+}

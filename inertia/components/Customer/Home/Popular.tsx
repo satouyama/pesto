@@ -42,7 +42,7 @@ export default function Popular({ items }: any) {
     <div className="pb-10">
       <div className="container relative">
         <div className="flex items-center justify-between">
-          <h3 className="text-xl sm:text-2xl py-6 px-4 sm:px-6">{t('Most popular')}</h3>
+          <h3 className="text-xl sm:text-2xl py-6 px-4 sm:px-6">{t('Mais populares')}</h3>
           <div className="flex items-center gap-2">
             <IconButton
               aria-label={'left arrow'}

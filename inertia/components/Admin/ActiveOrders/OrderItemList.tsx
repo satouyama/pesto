@@ -32,6 +32,7 @@ export default function OrderItemList({ items }: { items: Item[] }) {
   ];
 
   const joinedVariantNames = (variantData: string) => {
+    variantData = JSON.stringify(variantData);
     if (!variantData) return;
     const variants = JSON.parse(variantData);
     return variants
@@ -40,12 +41,14 @@ export default function OrderItemList({ items }: { items: Item[] }) {
   };
 
   const joinedAddonNames = (addonData: string) => {
+    addonData = JSON.stringify(addonData);
     if (!addonData) return;
     const addons = JSON.parse(addonData);
     return addons.map((addon: any) => addon.name + ' x ' + addon.quantity).join(', ');
   };
 
   const addonsSize = (addonData: string) => {
+    addonData = JSON.stringify(addonData);
     if (!addonData) return 0;
     const addons = JSON.parse(addonData);
     return addons.length;
@@ -95,7 +98,7 @@ export default function OrderItemList({ items }: { items: Item[] }) {
                         <Text as="h3" fontWeight={600} color="secondary.500">
                           {t('Variants')}
                         </Text>
-                        {JSON.parse(item?.variants).map((variant: any) => (
+                        {JSON.parse(JSON.stringify(item?.variants)).map((variant: any) => (
                           <ul key={variant.id} className="list-disc list-inside mb-2">
                             <li>{variant.name}</li>
                             <ul className="list-inside list-[circle] ml-4">
@@ -113,7 +116,7 @@ export default function OrderItemList({ items }: { items: Item[] }) {
                             <Text as="h3" fontWeight={600} color="secondary.500" mt="4">
                               {t('Addons')}
                             </Text>
-                            {JSON.parse(item?.addons).map((addon: any) => (
+                            {JSON.parse(JSON.stringify(item?.addons)).map((addon: any) => (
                               <ul key={addon.id} className="list-disc list-inside mb-2">
                                 <li>
                                   {t(addon.name)} ( {t('QTY: ')} {addon.quantity} )

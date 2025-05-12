@@ -141,7 +141,7 @@ export default function DeliveredTable({
               variant="subtle"
               colorScheme={row.original.paymentType === 'cash' ? 'primary' : 'blue'}
             >
-              {t(row.original.paymentType)}
+              {t(mapPaymentType(row.original.paymentType))}
             </Badge>
           ),
         },

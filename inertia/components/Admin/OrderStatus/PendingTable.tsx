@@ -1,15 +1,16 @@
 import DataTable from '@/components/common/DataTable';
 import useTableData from '@/data/use_table_data';
 import { convertToCurrencyFormat } from '@/utils/currency_formatter';
+import { mapOrderTypeStatus, mapPaymentType } from '@/utils/order_status';
 import { Badge, HStack, Switch } from '@chakra-ui/react';
 import { SortingState } from '@tanstack/react-table';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { toast } from 'sonner';
+import DeleteOrder from './DeleteOrder';
 import UpdateOrderStatus from './UpdateOrderStatus';
 import OrderPreviewButton from './ViewPreviewButton';
-import DeleteOrder from './DeleteOrder';
 
 export default function PendingTable({
   setSelectedRow,
@@ -92,7 +93,7 @@ export default function PendingTable({
         },
         {
           accessorKey: 'orderNumber',
-          header: () => t('Order No'),
+          header: () => t('Numero do pedido'),
           cell: ({ row }) => <span className="font-bold">{row.original.orderNumber}</span>,
         },
         {
@@ -127,7 +128,7 @@ export default function PendingTable({
               delivery: 'primary',
               pickup: 'blue',
             };
-
+            console.log(row.original.type?.replace('_', '-'));
             return (
               <Badge
                 variant="solid"
@@ -135,7 +136,7 @@ export default function PendingTable({
                   colorScheme[row.original.type as keyof typeof colorScheme] || 'secondary'
                 }
               >
-                {t(row.original.type?.replace('_', '-'))}
+                {t(mapOrderTypeStatus(row.original.type?.replace('_', '-')))}
               </Badge>
             );
           },
@@ -155,7 +156,7 @@ export default function PendingTable({
               variant="subtle"
               colorScheme={row.original.paymentType === 'cash' ? 'primary' : 'blue'}
             >
-              {t(row.original.paymentType)}
+              {t(mapPaymentType(row.original.paymentType))}
             </Badge>
           ),
         },

@@ -1,16 +1,17 @@
-import axios from 'axios';
 import DataTable from '@/components/common/DataTable';
 import useTableData from '@/data/use_table_data';
 import { convertToCurrencyFormat } from '@/utils/currency_formatter';
+import { mapPaymentType } from '@/utils/order_status';
 import { Badge, HStack, Switch, Text } from '@chakra-ui/react';
 import { SortingState } from '@tanstack/react-table';
+import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { toast } from 'sonner';
 import DeleteOrder from './DeleteOrder';
 import PersonSelection from './PersonSelection';
 import UpdateOrderStatus from './UpdateOrderStatus';
 import OrderPreviewButton from './ViewPreviewButton';
-import { toast } from 'sonner';
 
 export default function ProcessingTable({
   setSelectedRow,
@@ -157,7 +158,7 @@ export default function ProcessingTable({
               variant="subtle"
               colorScheme={row.original.paymentType === 'cash' ? 'primary' : 'blue'}
             >
-              {t(row.original.paymentType)}
+              {t(mapPaymentType(row.original.paymentType))}
             </Badge>
           ),
         },

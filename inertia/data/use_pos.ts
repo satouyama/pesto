@@ -1,6 +1,6 @@
 import { Charge, Customer, POSItem, POSItemAddon, POSItemVariant } from '@/types/pos_type';
 import { create } from 'zustand';
-import { persist, createJSONStorage } from 'zustand/middleware';
+import { createJSONStorage, persist } from 'zustand/middleware';
 
 export interface POSState {
   customer?: Customer;

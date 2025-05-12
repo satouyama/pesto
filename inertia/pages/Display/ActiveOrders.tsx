@@ -19,6 +19,7 @@ import { match, P } from 'ts-pattern';
 export default function ActiveOrders() {
   const { t } = useTranslation();
   const { data: orderItems, isLoading, mutate } = useSWR('/api/orders', fetcher);
+  // console.log(order);
 
   useEffect(() => {
     const subscribeToOrders = async () => {

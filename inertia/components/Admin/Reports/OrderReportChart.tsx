@@ -1,6 +1,7 @@
-import Chart from 'react-apexcharts';
-import { ApexOptions } from 'apexcharts';
 import { Spinner } from '@chakra-ui/react';
+import { ApexOptions } from 'apexcharts';
+import ptBR from 'apexcharts/dist/locales/pt.json';
+import Chart from 'react-apexcharts';
 
 export default function OrderReportChart({
   periodType,
@@ -13,7 +14,13 @@ export default function OrderReportChart({
   isLoading: boolean;
   onPeriodSelect: (period: string) => void;
 }) {
-  const currentPeriod = new Date().toLocaleString('default', periodType === 'week' ? { weekday: 'short' } : { month: 'short'});
+  const currentPeriod = new Date().toLocaleString(
+    'pt-BR',
+    periodType === 'week'
+      ? { weekday: 'short' }
+      : { month: 'short' }
+  )
+  // console.log('PERIOD', currentPeriod)
 
   const series = [
     {
@@ -25,6 +32,8 @@ export default function OrderReportChart({
   // chart option
   const options: ApexOptions = {
     chart: {
+      locales: [ptBR],
+      defaultLocale: 'pt',
       id: 'order-report-chart',
       fontFamily: 'Inter',
       stacked: false,

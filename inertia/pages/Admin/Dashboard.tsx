@@ -9,6 +9,7 @@ import { PageProps } from '@/types';
 import { startCase } from '@/utils/string_formatter';
 import { Button, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react';
 import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
 import {
   ArrowDown2,
   CloseCircle,
@@ -39,7 +40,7 @@ export default function Dashboard({ auth }: PageProps) {
             </h2>
             <div className="flex items-center gap-2 text-lg">
               <span>{t('Today is')}</span>
-              <span className="text-primary-400">{format(new Date(), 'iii, dd MMM')}</span>
+              <span className="text-primary-400">{format(new Date(), 'iii, dd MMM', { locale: ptBR })}</span>
             </div>
           </div>
 
@@ -90,7 +91,7 @@ export default function Dashboard({ auth }: PageProps) {
 
               <AnalyticsCard
                 size="large"
-                title={t('On Delivery')}
+                title={t('Para entrega')}
                 icon={<TruckFast variant="Bulk" size={24} className="text-blue-400" />}
                 value={isLoading ? 0 : data?.data?.on_delivery}
                 link="/admin/order-status/on-delivery"

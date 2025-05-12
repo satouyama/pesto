@@ -1,6 +1,4 @@
-import { useRef } from 'react';
-import axios from 'axios';
-import { Form, Formik } from 'formik';
+import NewCustomerSchema from '@/schemas/NewCustomerSchema';
 import {
   Button,
   Drawer,
@@ -11,10 +9,12 @@ import {
   DrawerOverlay,
   useDisclosure,
 } from '@chakra-ui/react';
+import axios from 'axios';
+import { Form, Formik } from 'formik';
 import { Add } from 'iconsax-react';
-import { toast } from 'sonner';
-import NewCustomerSchema from '@/schemas/NewCustomerSchema';
+import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { toast } from 'sonner';
 import FieldRenderer from '../FieldRenderer';
 
 // Field items configuration

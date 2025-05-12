@@ -182,16 +182,16 @@ export default function MyOrders() {
                                         <PopoverTrigger>
                                           <Text noOfLines={1}>
                                             {item?.variants &&
-                                              joinedVariantNames(JSON.parse(item?.variants))}
-                                            {JSON.parse(item.addons).length > 0 && ' | '}
-                                            {joinedAddonNames(JSON.parse(item?.addons))}
+                                              joinedVariantNames(item?.variants)}
+                                            {item.addons.length > 0 && ' | '}
+                                            {joinedAddonNames(item?.addons)}
                                           </Text>
                                         </PopoverTrigger>
                                         <PopoverContent className="p-4">
                                           <Text as="h3" fontWeight={600} color="secondary.500">
                                             {t('Variants')}
                                           </Text>
-                                          {JSON.parse(item.variants).map((variant: any) => (
+                                          {item.variants.map((variant: any) => (
                                             <ul
                                               key={variant.id}
                                               className="list-disc list-inside mb-2"
@@ -207,7 +207,7 @@ export default function MyOrders() {
 
                                           <Divider className="border-black/5" />
 
-                                          {!!JSON.parse(item.addons).length && (
+                                          {!!item.addons.length && (
                                             <>
                                               <Text
                                                 as="h3"
@@ -217,7 +217,7 @@ export default function MyOrders() {
                                               >
                                                 {t('Addons')}
                                               </Text>
-                                              {JSON.parse(item.addons).map((addon: any) => (
+                                              {item.addons.map((addon: any) => (
                                                 <ul
                                                   key={addon.id}
                                                   className="list-disc list-inside mb-2"

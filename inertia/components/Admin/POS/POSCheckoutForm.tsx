@@ -1,7 +1,10 @@
 import QuantityController from '@/components/common/QuantityController';
+import usePOS, { POSState } from '@/data/use_pos';
 import useDebounce from '@/hooks/useDebounce';
 import useWindowSize from '@/hooks/useWindowSize';
 import fetcher from '@/lib/fetcher';
+import { PageProps } from '@/types';
+import { Charge, Customer, POSItem, POSItemAddon, POSItemVariant } from '@/types/pos_type';
 import { convertToCurrencyFormat } from '@/utils/currency_formatter';
 import {
   Badge,
@@ -37,8 +40,9 @@ import {
   useBoolean,
   useDisclosure,
 } from '@chakra-ui/react';
+import { usePage } from '@inertiajs/react';
 import axios from 'axios';
-import { Add, ArrowRight, SearchNormal, Trash, Edit2 } from 'iconsax-react';
+import { Add, ArrowRight, Edit2, SearchNormal, Trash } from 'iconsax-react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { toast } from 'sonner';
@@ -46,14 +50,10 @@ import useSWR, { useSWRConfig } from 'swr';
 import { match, P } from 'ts-pattern';
 import CustomerInsertForm from './CustomerInsertForm';
 import CustomerUpdateForm from './CustomerUpdateForm';
+import DiscountTypeRadioGroup from './DiscountTypeSelect';
 import EditPOSItem from './EditPOSItem';
 import OrderTypeRadioGroup from './OrderTypeSelect';
 import PaymentTypeRadioGroup from './PaymentTypeSelect';
-import DiscountTypeRadioGroup from './DiscountTypeSelect';
-import { usePage } from '@inertiajs/react';
-import { PageProps } from '@/types';
-import usePOS, { POSState } from '@/data/use_pos';
-import { Charge, POSItemVariant, POSItemAddon, Customer, POSItem } from '@/types/pos_type';
 
 export const POSCheckoutForm = () => {
   const pos = usePOS();
@@ -227,7 +227,7 @@ export const POSCheckoutForm = () => {
 
           {/* Customer information */}
           <Flex flexDir="column" gap="2">
-            <label>{t('Customer info')}</label>
+            <label>{t('Informações do cliente')}</label>
             {isCustomerInsertFormOpen ? (
               <CustomerInsertForm
                 close={() => setIsCustomerInsertForm(false)}
@@ -299,7 +299,7 @@ export const POSCheckoutForm = () => {
                       </InputLeftElement>
                       <Input
                         type="search"
-                        placeholder={t('Search...')}
+                        placeholder={t('Buscar...')}
                         value={customerSearchText}
                         onChange={(e) => setCustomerSearchText(e.target.value)}
                       />
